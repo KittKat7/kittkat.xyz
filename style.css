@@ -1,0 +1,352 @@
+:root {
+	--forground: #000000;
+	--forground-off: #1f1f1f;
+	--background: #d5e6ed;
+	--background-off: #b1c0c7;
+	--accent: #5890aa;
+	--accent-off: #3d6e85;
+}
+
+/* 
+:root.dark-mode {
+	--forground: #ffffff;
+	--forground-off: #b1c0c7;
+	--background: #1f1f1f;
+	--background-off: #191919;
+	--accent-off: #5890aa;
+	--accent: #3d6e85;
+} */
+
+/* @media (prefers-color-scheme: light) {
+	:root {
+	--forground: #000000;
+	--forground-off: #1f1f1f;
+	--background: #d5e6ed;
+	--background-off: #b1c0c7;
+	--accent: #5890aa;
+	--accent-off: #3d6e85;
+}	} */
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--forground: #ffffff;
+		--forground-off: #b1c0c7;
+		--background: #252525;
+		--background-off: #191919;
+		--accent: #3d6e85;
+		--accent-off: #5890aa;
+	}
+}
+
+html {
+	/* height: 100%; not sure this is userful?*/
+	background-color: var(--background-off);
+}
+
+body {
+	margin: 0 auto;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	/* max-width: 1200px; */
+	/* min-height: 100%; */
+
+	/* background-color: var(--background); */
+	color: var(--forground-off);
+}
+
+/* HEADER */
+header {
+	/* position: fixed;
+	z-index: 999999; */
+	top: 0;
+	left: 0;
+	right: 0;
+	background-color: var(--accent);
+	/* border-color: var(--accent);
+	border-top-color: var(--accent-off);
+	border-left-color: var(--accent-off);
+	border-right-color: var(--background);
+	border-bottom-color: var(--background);
+	border-width: 2px; */
+	/* border-style: solid; */
+}
+
+.headerBtn {
+	color: var(--forground);
+	border-radius: 0px;
+	padding: 10px;
+	margin: 0px;
+	background-color: transparent;
+	border: none;
+	font-size: 24px;
+	font-weight: bold;
+	font-family: Arial, sans-serif;
+}
+
+.headerBtn:hover {
+	color: var(--forground-off);
+	border-radius: 0px;
+	padding: 10px;
+	margin: 0px;
+	background-color: transparent;
+	border: none;
+	font-size: 24px;
+}
+
+.dark-mode-toggle {
+	/* Set the width and height of the button to match the size of your icon */
+	width: 32px;
+	height: 32px;
+	/* Remove the default button styles */
+	border: none;
+	padding: 0;
+	margin-left: 10px;
+	/* Center the background image within the button */
+	background-position: center;
+	background-repeat: no-repeat;
+	/* Remove the default button text */
+	color: transparent;
+	background-color: transparent;
+}
+
+/* FOOTER */
+footer {
+	background-color: var(--background-off);
+	padding: 20px;
+	text-align: center;
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+.footer-text {
+	color: var(--accent-off);
+	font-size: 14px;
+}
+
+.footer-btn-list {
+	list-style: none;
+	padding: 0;
+	margin-top: 10px;
+}
+
+.footer-btn {
+	display: inline-block;
+	margin-right: 10px;
+}
+
+/* MAIN */
+main {
+	position: relative;
+	--pad: 20px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	overflow-y: auto;
+	padding: 50px;
+	padding-top: 0;
+	color: var(--forground);
+	/* new below */
+	box-sizing: border-box;
+	padding: var(--pad);
+	background-color: var(--background);
+	border-radius: 10px;
+	border-color: var(--accent-off);
+	/* border-width: 10px; */
+	/* border-style: solid; */
+	/* max-width: 1200px; */
+	/* max-width: 1920px; */
+	width: 95%;
+	transform: translate(calc((100vw - 100%) / 2 - var(--pad)), 0);
+	margin-left: var(--pad);
+	margin-right: var(--pad);
+	/* min-height: calc(80vh - 100px); */
+	/* min-height: 100vh; */
+	/* box-shadow: 0px 0px 10px var(--accent-off); */
+	--main-height: 100%
+}
+
+@media (orientation: landscape) {
+	main {
+		width: 75%;
+		/* padding-bottom: 100%; */
+	}
+}
+
+h1 {
+	text-align: center;
+}
+
+button {
+	/* Set the font and text styles */
+	font-family: Arial, sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+	color: var(--forground);
+
+	/* Set the background color and border */
+	background-color: var(--accent);
+	border: none;
+	border-radius: 7px;
+
+	/* Add some padding and set the display to inline-block */
+	padding: 7px 14px;
+	display: inline-block;
+
+	/* Add some visual effects */
+	/* box-shadow: 0px 8px 16px rgba(0,0,0,0.2); */
+	transition: all 0s ease;
+
+	/* Remove the default button styles */
+	cursor: pointer;
+}
+
+button:hover {
+	/* Change the background color on hover */
+	background-color: var(--accent-off);
+}
+
+button:active {
+	/* Add a "pressed" effect on active */
+	box-shadow: none;
+}
+
+code {
+	background-color: var(--background-off);
+	border-radius: 3px;
+	font-family: courier, monospace;
+	padding: 0 3px;
+}
+
+.codeblock {
+	background-color: var(--background-off);
+	border-radius: 3px;
+	font-family: courier, monospace;
+	padding: 0 3px;
+}
+
+.text-btn {
+	color: var(--forground);
+	border-radius: 0px;
+	/* padding: 10px; */
+	margin: 0px;
+	background-color: transparent;
+	border: none;
+	/* font-size: 24px; */
+}
+
+.text-btn:hover {
+	/* Change the background color on hover */
+	color: var(--forground-off);
+	background-color: transparent;
+	border: none;
+}
+
+.blank-btn {
+	color: var(--forground);
+	border-radius: 0px;
+	/* padding: 10px; */
+	margin: 0px;
+	background-color: transparent;
+	border: none;
+	/* font-size: 24px; */
+}
+
+.blank-btn:hover {
+	/* Change the background color on hover */
+	color: var(--forground-off);
+	background-color: transparent;
+	border: none;
+}
+
+.container {
+	display: flex;
+}
+
+@media (max-width: 1000px) {
+	.container {
+		flex-direction: column;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+}
+
+@media (max-width: 500px) {
+	.container {
+		width: 100%;
+		flex-direction: column;
+	}
+}
+
+.text-container {
+	margin-left: 10px;
+}
+
+.outline {
+	border-radius: 5px;
+	outline: 2px solid var(--accent);
+}
+
+.shadowBox {
+	--pad: 10px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-right: 10px;
+	color: var(--forground);
+	/* box-sizing: border-box; */
+	padding: var(--pad);
+	background-color: var(--background);
+	border-radius: 10px;
+	/* transform: translate(calc((100vw - 100%) / 2 - var(--pad)), 0); */
+	/* margin-left: var(--pad);
+	margin-right: var(--pad); */
+	box-shadow: 0px 0px 10px var(--accent-off);
+	width: fit-content;
+}
+
+.showcase {
+	display: flex;
+	flex-wrap: wrap;
+	/* justify-content: center; */
+}
+
+.showcaseCard {
+	width: calc(100% - 20px);
+}
+
+nav .dropdown {
+	display: none;
+}
+
+nav .navdiv {
+	float: right;
+	/* display: flex; */
+}
+
+@media (max-width: 720px) {
+	nav .navdiv {
+		display: none;
+	}
+
+	nav .dropdown {
+		display: inline-block;
+	}
+}
+
+.dropdown {
+	position: relative;
+	display: inline-block;
+}
+
+.dropdown-content {
+	background-color: var(--accent);
+	display: none;
+	position: absolute;
+	z-index: 1;
+	right: 0%;
+}
+
+.dropdown:hover .dropdown-content {
+	display: block;
+}
