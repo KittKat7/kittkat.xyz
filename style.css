@@ -56,19 +56,11 @@ body {
 
 /* HEADER */
 header {
-	/* position: fixed;
-	z-index: 999999; */
 	top: 0;
 	left: 0;
 	right: 0;
 	background-color: var(--accent);
-	/* border-color: var(--accent);
-	border-top-color: var(--accent-off);
-	border-left-color: var(--accent-off);
-	border-right-color: var(--background);
-	border-bottom-color: var(--background);
-	border-width: 2px; */
-	/* border-style: solid; */
+	padding: 5;
 }
 
 .headerBtn {
