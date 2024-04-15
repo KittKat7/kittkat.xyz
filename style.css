@@ -66,8 +66,8 @@ header {
 .headerBtn {
 	color: var(--forground);
 	border-radius: 0px;
-	padding: 10px;
-	margin: 0px;
+	/* margin: 10px; */
+	padding: 0;
 	background-color: transparent;
 	border: none;
 	font-size: 24px;
@@ -77,12 +77,6 @@ header {
 
 .headerBtn:hover {
 	color: var(--forground-off);
-	border-radius: 0px;
-	padding: 10px;
-	margin: 0px;
-	background-color: transparent;
-	border: none;
-	font-size: 24px;
 }
 
 .dark-mode-toggle {
@@ -328,7 +322,7 @@ nav .navdiv {
 
 .dropdown {
 	position: relative;
-	display: inline-block;
+	display: inline;
 }
 
 .dropdown-content {
@@ -336,7 +330,8 @@ nav .navdiv {
 	display: none;
 	position: absolute;
 	z-index: 1;
-	right: 0%;
+	padding: 5%;
+	right: -5;
 }
 
 .dropdown:hover .dropdown-content {
