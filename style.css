@@ -301,39 +301,33 @@ code {
 	width: calc(100% - 20px);
 }
 
-nav .dropdown {
-	display: none;
-}
-
-nav .navdiv {
+nav {
 	float: right;
-	/* display: flex; */
-}
-
-@media (max-width: 720px) {
-	nav .navdiv {
-		display: none;
-	}
-
-	nav .dropdown {
-		display: inline-block;
-	}
-}
-
-.dropdown {
 	position: relative;
 	display: inline;
 }
 
-.dropdown-content {
-	background-color: var(--accent);
+.navDropdownButton {
 	display: none;
-	position: absolute;
-	z-index: 1;
-	padding: 5%;
-	right: -5;
 }
 
-.dropdown:hover .dropdown-content {
-	display: block;
+@media (max-width: 720px) {
+	.navDropdownButton {
+		display: inline;
+	}
+
+	nav .navLinks {
+		display: none;
+	}
+
+	nav:hover .navLinks {
+		display: block;
+		background-color: var(--accent);
+		position: absolute;
+		z-index: 1;
+		padding: 5%;
+		right: -5;
+		/* position: relative; */
+		/* display: inline; */
+	}
 }
