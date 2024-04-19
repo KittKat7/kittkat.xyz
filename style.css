@@ -73,6 +73,13 @@ header {
 	font-size: 24px;
 	font-weight: bold;
 	font-family: Arial, sans-serif;
+	text-decoration: none;
+	/* display: inline-block; */
+	margin-right: 5px;
+}
+
+.home-btn {
+	margin-left: 5px;
 }
 
 .headerBtn:hover {
@@ -178,7 +185,6 @@ button {
 	display: inline-block;
 
 	/* Add some visual effects */
-	/* box-shadow: 0px 8px 16px rgba(0,0,0,0.2); */
 	transition: all 0s ease;
 
 	/* Remove the default button styles */
