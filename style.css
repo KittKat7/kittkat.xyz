@@ -215,20 +215,32 @@ code {
 	padding: 0 3px;
 }
 
-.text-btn {
+.btn {
+	text-decoration: none;
+	/* Set the font and text styles */
+	font-family: Arial, sans-serif;
+	font-size: 16px;
+	font-weight: bold;
 	color: var(--forground);
-	border-radius: 0px;
-	/* padding: 10px; */
-	margin: 0px;
-	background-color: transparent;
+
+	/* Set the background color and border */
+	background-color: var(--accent);
 	border: none;
-	/* font-size: 24px; */
+	border-radius: 7px;
+
+	/* Add some padding and set the display to inline-block */
+	padding: 7px 14px;
+	display: inline-block;
+
+	/* Add some visual effects */
+	transition: all 0s ease;
+
+	/* Remove the default button styles */
+	cursor: pointer;
 }
 
-.text-btn:hover {
-	/* Change the background color on hover */
-	color: var(--forground-off);
-	background-color: transparent;
+.btn:hover {
+	background-color: var(--accent-off);
 	border: none;
 }
 
@@ -281,30 +293,37 @@ code {
 }
 
 .shadowBox {
+	/* box-shadow: 0px 0px 10px var(--accent-off);
+	border-radius: 10px;
+	padding: 10px; */
+
 	--pad: 10px;
 	margin-top: 20px;
 	margin-bottom: 20px;
-	margin-right: 10px;
+	margin-right: 5px;
+	margin-left: 5px;
 	color: var(--forground);
-	/* box-sizing: border-box; */
 	padding: var(--pad);
 	background-color: var(--background);
 	border-radius: 10px;
+	box-shadow: 0px 0px 10px var(--accent-off);
+	width: fit-content;
+
+	/* box-sizing: border-box; */
 	/* transform: translate(calc((100vw - 100%) / 2 - var(--pad)), 0); */
 	/* margin-left: var(--pad);
 	margin-right: var(--pad); */
-	box-shadow: 0px 0px 10px var(--accent-off);
-	width: fit-content;
 }
 
 .showcase {
+	width: 100%;
 	display: flex;
 	flex-wrap: wrap;
-	/* justify-content: center; */
 }
 
 .showcaseCard {
-	width: calc(100% - 20px);
+	flex: 40%;
+	/* width: calc(100% - 20px); */
 }
 
 nav {
@@ -336,4 +355,12 @@ nav {
 		/* position: relative; */
 		/* display: inline; */
 	}
+}
+
+::-webkit-scrollbar {
+	background-color: var(--accent-off);
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: var(--accent);
 }
