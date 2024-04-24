@@ -75,11 +75,11 @@ header {
 	font-family: Arial, sans-serif;
 	text-decoration: none;
 	/* display: inline-block; */
-	margin-right: 5px;
+	margin-right: 10px;
 }
 
 .home-btn {
-	margin-left: 5px;
+	margin-left: 10px;
 }
 
 .nav-btn:hover {
