@@ -230,7 +230,11 @@ code {
 
 .btn:hover {
 	background-color: var(--accent-off);
-	border: none;
+	/* border: none; */
+}
+
+.btn:active {
+	background-color: var(--accent);
 }
 
 .blank-btn {
