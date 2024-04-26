@@ -60,7 +60,7 @@ header {
 	left: 0;
 	right: 0;
 	background-color: var(--accent);
-	padding: 5;
+	padding: 10px;
 }
 
 .nav-btn {
