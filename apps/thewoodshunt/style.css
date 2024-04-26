@@ -1,0 +1,66 @@
+:root {
+	--accent: #58aa63;
+	--accent-off: #45853d;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--accent: #45853d;
+		--accent-off: #58aa63;
+	}
+}
+
+main {
+	background-color: inherit;
+}
+
+h2 {
+	background-color: var(--background);
+	padding: 20px;
+	text-align: center;
+	border-radius: 10px;
+}
+
+.banner-content {
+	vertical-align: middle;
+	z-index: 1;
+	width: fit-content;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: var(--accent);
+	padding: 20px;
+	border-radius: 20px;
+}
+
+.banner {
+	position: relative;
+	align-content: center;
+	min-height: 20vh;
+	height: 30vh !important;
+	padding: 0;
+}
+
+table {
+	background-color: var(--background);
+	color: var(--forground);
+	width: 100%;
+	border-collapse: collapse;
+}
+
+tr:nth-child(even) {
+	background-color: var(--background-off);
+}
+
+th {
+	font-weight: bold;
+	text-align: right;
+	border: 2px solid var(--accent);
+	padding: 10px;
+}
+
+td {
+	text-align: left;
+	border: 2px solid var(--accent);
+	padding: 10px;
+}
