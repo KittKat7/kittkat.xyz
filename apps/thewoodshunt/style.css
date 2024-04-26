@@ -1,12 +1,12 @@
 :root {
-	--accent: #58aa63;
-	--accent-off: #45853d;
+	--accent: #32b12d;
+	--accent-off: #25741a;
 }
 
 @media (prefers-color-scheme: dark) {
 	:root {
-		--accent: #45853d;
-		--accent-off: #58aa63;
+		--accent: #25741a;
+		--accent-off: #32b12d;
 	}
 }
 
@@ -15,7 +15,7 @@ main {
 }
 
 h2 {
-	background-color: var(--background);
+	background-color: var(--accent);
 	padding: 20px;
 	text-align: center;
 	border-radius: 10px;
@@ -46,21 +46,66 @@ table {
 	color: var(--forground);
 	width: 100%;
 	border-collapse: collapse;
+	border: 2px solid var(--accent);
 }
 
 tr:nth-child(even) {
-	background-color: var(--background-off);
+	background-color: var(--accent);
 }
 
 th {
 	font-weight: bold;
 	text-align: right;
-	border: 2px solid var(--accent);
+	border-right: 2px solid var(--accent);
 	padding: 10px;
+	border: 2px solid var(--accent);
 }
 
 td {
 	text-align: left;
-	border: 2px solid var(--accent);
 	padding: 10px;
+	border: 2px solid var(--accent);
+}
+
+.character-card {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.character-info {
+	width: calc(50% - 20px);
+	/* Adjust width as needed */
+	background-color: var(--background);
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	border-radius: 8px;
+	overflow: hidden;
+	margin-bottom: 20px;
+}
+
+.character-info img {
+	width: 100%;
+	height: auto;
+}
+
+.character-info h3 {
+	padding: 20px;
+	margin: 0;
+}
+
+.character-info p {
+	padding: 20px;
+	margin: 0;
+}
+
+li {
+	padding: 5px;
+}
+
+a {
+	color: var(--accent);
+}
+
+a:active {
+	color: var(--accent-off)
 }
