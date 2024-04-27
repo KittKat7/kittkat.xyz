@@ -2,9 +2,11 @@
 <script src="/z.lib/import.js"></script>
 <script id="/z.lib/head.html">include();</script>
 
+<script>
+	document.head.innerHTML = document.head.innerHTML + "<title>The Woods Hunt</title> <link rel=\"shortcut icon\" href=\"./z.assets/icon_256x256.jpeg\" type=\"image/x-icon\">";
+</script>
+
 <link rel="stylesheet" href="./style.css">
-<title>The Woods Hunt</title>
-<link rel="shortcut icon" href="./z.assets/icon_256x256.png" type="image/x-icon">
 
 <body>
 	<script id="/z.lib/header.html">include();</script>
@@ -12,7 +14,9 @@
 		<div class="banner" style="background-image: url(./z.assets/background_1024x768.jpeg);">
 
 			<div class="banner-content">
-				<h1><a href="" class="blank-btn">The Woods Hunt</a></h1>
+				<div>
+					<h1><a href="" class="blank-btn">The Woods Hunt</a></h1>
+				</div>
 
 				<div>
 					<a href="#home" class="btn">Homepage</a>
@@ -78,14 +82,19 @@
 
 			<div>
 				<h3>Release Date: Unknown</h3>
+				<a href="./"><img src="./z.assets/icon_256x256.jpeg" alt="The woods hunt icon"
+						style="height: 182px;"></a>
 				<a href="https://www.esrb.org/ratings-guide/"><img src="./z.assets/esrb.png"
 						alt="ESRB Rating, 10+: Fantasy Violence" style="height: 182px;"></a>
 				<br>
 				<a href="https://store.steampowered.com/"><img src="./z.assets/steam_icon.png" alt="Steam Icon"
 						style="height: 182px;"></a>
-				<img src="./z.assets/tux_icon.png" alt="Tux, the linux penguin" style="height: 182px;">
-				<img src="./z.assets/windows_icon.png" alt="Windows logo" style="height: 182px;">
-				<img src="./z.assets/macos_icon.png" alt="MacOS logo" style="height: 182px;">
+				<a href="https://pop.system76.com/"><img src="./z.assets/tux_icon.png" alt="Tux, the linux penguin"
+						style="height: 182px;"></a>
+				<a href="https://www.microsoft.com/en-us/windows/"><img src="./z.assets/windows_icon.png"
+						alt="Windows logo" style="height: 182px;"></a>
+				<a href="https://www.apple.com/macos"><img src="./z.assets/macos_icon.png" alt="MacOS logo"
+						style="height: 182px;"></a>
 			</div>
 		</section>
 
@@ -122,7 +131,48 @@
 		</section>
 
 		<section id="merch">
-			<h2>TODO Merchandise</h2>
+			<h2>Merchandise</h2>
+
+			<div class="character-card">
+				<div class="character-info">
+					<img src="./z.assets/merch_tshirt.jpeg" alt="TODO">
+					<h3>T-Shirt</h3>
+					<p>
+						A T-Shirt with the 'The Woods Hunt' logo. Purchasing this supports the creation of further
+						projects, and wearing the shirt shows your love for this game and story.
+					</p>
+				</div>
+
+				<div class="character-info">
+					<img src="./z.assets/merch_drawstring_bag.jpeg" alt="TODO">
+					<h3>Drawstring Bag</h3>
+					<p>
+						A bag to help you carry things, with the 'The Woods Hunt' logo. Purchasing this supports the
+						creation of further
+						projects, and using the bag shows your love for this game and story.
+					</p>
+				</div>
+
+				<div class="character-info">
+					<img src="./z.assets/merch_glowing_stone.jpeg" alt="TODO">
+					<h3>Glowing Stone Night Light</h3>
+					<p>
+						A stone, put in a fire until the point of cracking, glowing from the heat. This stone will
+						provide light in the dark. Purchasing this shows your appreciation of the game and helps support
+						furute projects.
+					</p>
+				</div>
+
+				<div class="character-info">
+					<img src="./z.assets/merch_wendigo_plushy.jpeg" alt="TODO">
+					<h3>Wendigo Plush</h3>
+					<p>
+						The wendigo plushy. A fearsom beast to keep you company. Instead of hunting for food, this small
+						creature just hunts for friends. Purchasing this shows your appreciation of the game and helps
+						support furute projects.
+					</p>
+				</div>
+			</div>
 
 		</section>
 
@@ -175,6 +225,13 @@
 						href="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Icon-Mac.svg/768px-Icon-Mac.svg.png">https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Icon-Mac.svg/768px-Icon-Mac.svg.png</a>
 				</li>
 				<li>
+					<b>Standard Merch Designs:</b> <a href="https://www.customink.com/">https://www.customink.com/</a>
+					<ul>
+						<li>T-Shirt</li>
+						<li>Drawstring Bag</li>
+					</ul>
+				</li>
+				<li>
 					<b>AI Generated Images:</b> <a
 						href="https://designer.microsoft.com/">https://designer.microsoft.com/</a>
 					<ul>
@@ -182,10 +239,12 @@
 						<li>Itawi character image</li>
 						<li>Wendigo character image</li>
 						<li>All images in cinimatic sequense/trailer</li>
+						<li>Glowing stone merch image</li>
+						<li>Wendigo plushy merch image</li>
 					</ul>
 				</li>
 				<li>
-					<b>Story References</b>
+					<b>Story References:</b>
 					<ul>
 						<li>
 							<a href="https://en.wikipedia.org/wiki/Wendigo">https://en.wikipedia.org/wiki/Wendigo</a>
@@ -213,7 +272,7 @@
 	--accent-off: #32b12d;
 }
 ">
-	<img src="/apps/thewoodshunt/z.assets/icon_256x256.png" alt="The Woods Hunt icon (Wendigo in the woods)">
+	<img src="/apps/thewoodshunt/z.assets/icon_256x256.jpeg" alt="The Woods Hunt icon (Wendigo in the woods)">
 	<h3>The Woods Hunt</h3>
 	<p>Defeat the fearsom wendigo who lurks in the woods.</p>
 	<a class="btn" href="/apps/thewoodshunt/">Website</a>
