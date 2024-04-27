@@ -30,8 +30,7 @@ function getAppCard() {
 
 			if (specificElement) {
 				specificElement.removeAttribute('hidden');
-				specificElement.classList.add('showcase-card');
-				specificElement.classList.add('shadowBox');
+				specificElement.classList.add('card');
 				// Insert the specific element before the script element
 				scriptElement.insertAdjacentElement('beforebegin', specificElement);
 			} else {
