@@ -376,6 +376,18 @@ nav {
 	margin-bottom: 20px;
 }
 
+@media (max-width: 720px) {
+	.card {
+		width: calc(100%/2 - 10px);
+	}
+}
+
+@media (max-width: 480px) {
+	.card {
+		width: calc(100% - 10px);
+	}
+}
+
 .card img {
 	width: 100%;
 	height: auto;
