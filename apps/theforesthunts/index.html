@@ -1,10 +1,11 @@
 <link rel="stylesheet" href="/style.css">
 <script src="/z.lib/import.js"></script>
-<script id="/z.lib/head.html">include();</script>
 
-<script defer>
-	document.head.innerHTML = document.head.innerHTML + "<title>The Forest Hunts</title> <link rel=\"shortcut icon\" href=\"./z.assets/icon_256x256.jpeg\" type=\"image/x-icon\">";
+<script>
+	console.log(document.head.innerHTML);
+	// document.head.innerHTML = document.head.innerHTML + "<title>The Forest Hunts</title> <link rel=\"shortcut icon\" href=\"./z.assets/icon_256x256.jpeg\" type=\"image/x-icon\">";
 </script>
+<script id="/z.lib/head.html">include();</script>
 
 <link rel="stylesheet" href="./style.css">
 
@@ -27,7 +28,7 @@
 					-
 					<a href="#merch" class="btn">Merchandise</a>
 					-
-					<a href="#updates" class="btn">Transmedia</a>
+					<a href="#transmedia" class="btn">Transmedia</a>
 					-
 					<a href="#about" class="btn">About</a>
 					-
@@ -165,7 +166,7 @@
 					<p>
 						A stone, put in a fire until the point of cracking, glowing from the heat. This stone will
 						provide light in the dark. Purchasing this shows your appreciation of the game and helps support
-						furute projects.
+						future projects.
 					</p>
 				</div>
 
@@ -175,24 +176,49 @@
 					<p>
 						The wendigo plushy. A fearsom beast to keep you company. Instead of hunting for food, this small
 						creature just hunts for friends. Purchasing this shows your appreciation of the game and helps
-						support furute projects.
+						support future projects.
 					</p>
 				</div>
 			</div>
 
 		</section>
 
-		<section id="updates">
-			<h2>TODO Transmedia</h2>
+		<section id="transmedia">
+			<h2>Transmedia</h2>
 			<!-- TODO -->
 			<!--
 			Outline a strategy for extending your game's narrative through transmedia and/or ARGs. Explain in detail, with examples.
 			For information on transmedia and ARGs, review chapters 2 and 10 of the course textbook Digital Storytelling: A Creator's Guide to Interactive Entertainment.
 			-->
-			In a future update, I plan on adding an online story of the first Wendigo. This story will be told through a
-			mix
-			of videos and graphic novel style graphics.
+			<p>
+				The Forest Hunts only covers defeating the wendigo. To extend this story, I will be releasing a
+				graphical
+				story depicting the creation of the wendigo. This was already very briefly touched on in the cinematic
+				video, but this story will go into much more details. The addition of this extra content will provide a
+				more
+				emersive experience to the game.
 
+				Below are some examples of scenes that will be in the story.
+			</p>
+
+			<div class="character-card">
+				<div class="character-info">
+					<img src="./z.assets/graphic_village.jpeg" alt="Graphic of village">
+					<h3>The village: before over harvesting</h3>
+				</div>
+				<div class="character-info">
+					<img src="./z.assets/graphic_hunting_party.jpeg" alt="Graphic of hunting party">
+					<h3>Hunting party: going to collect resources</h3>
+				</div>
+				<div class="character-info">
+					<img src="./z.assets/graphic_village_apart.jpeg" alt="Graphic of village falling apart">
+					<h3>The village: falling apart after over harvesting</h3>
+				</div>
+				<div class="character-info">
+					<img src="./z.assets/graphic_wendigo.jpeg" alt="Graphic of wendigo">
+					<h3>The wendigo: born from the greed of the village</h3>
+				</div>
+			</div>
 		</section>
 
 		<section id="about">
@@ -263,7 +289,6 @@
 							<a
 								href="https://en.wikipedia.org/wiki/List_of_Algonquian_personal_names">https://en.wikipedia.org/wiki/List_of_Algonquian_personal_names</a>
 						</li>
-						<!-- TODO: Add other sources -->
 					</ul>
 				</li>
 			</ul>
