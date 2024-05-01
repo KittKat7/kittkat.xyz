@@ -148,7 +148,7 @@ main {
 
 @media (orientation: landscape) {
 	main {
-		width: 75%;
+		width: 60%;
 		/* padding-bottom: 100%; */
 	}
 }
