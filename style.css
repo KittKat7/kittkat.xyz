@@ -435,3 +435,11 @@ nav {
 	text-align: center;
 	border-radius: 10px;
 }
+
+a {
+	color: var(--accent);
+}
+
+a:active {
+	color: var(--accent-off);
+}
