@@ -1,0 +1,11 @@
+:root {
+	--accent: blueviolet;
+	--accent-off: purple;
+}
+
+h2 {
+	background-color: var(--accent);
+	padding: 20px;
+	text-align: center;
+	border-radius: 10px;
+}
