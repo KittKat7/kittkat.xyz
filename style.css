@@ -428,3 +428,10 @@ nav {
 	/* text-decoration: none; */
 	color: var(--forground);
 }
+
+.h2-banner {
+	background-color: var(--accent);
+	padding: 20px;
+	text-align: center;
+	border-radius: 10px;
+}
