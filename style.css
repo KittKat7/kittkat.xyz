@@ -369,6 +369,7 @@ nav {
 	background-color: var(--background);
 	overflow: hidden;
 	margin-bottom: 20px;
+	/* padding-bottom: 20px; */
 	/* padding: 10px; */
 }
 
