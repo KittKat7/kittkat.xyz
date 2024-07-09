@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="/style.css?v=">
+<script src="/z.lib/import.js"></script>
+<script id="/z.lib/head.html">include();</script>
+
+<body>
+	<script id="/z.lib/header.html">include();</script>
+	<main>
+		<script>
+			const queryString = window.location.search;
+			const urlParams = new URLSearchParams(queryString);
+			const article = "https://raw.githubusercontent.com/KittKat7/kittkatxyz-articles/main/" + urlParams.get('article') + ".md";
+			includeMD(article);
+			// console.log(article);
+		</script>
+		<!-- <script
+			id="https://raw.githubusercontent.com/KittKat7/kittkatxyz-articles/main/2023062601.md">include();</script> -->
+	</main>
+	<script id="/z.lib/footer.html">include();</script>
+</body>

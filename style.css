@@ -365,12 +365,13 @@ nav {
 	border-radius: 1em;
 	border: 4px solid transparent;
 
-	width: calc(100%/3 - 15px);
+	width: calc(100%/3 - 55px);
 	background-color: var(--background);
 	overflow: hidden;
 	margin-bottom: 20px;
 	/* padding-bottom: 20px; */
 	/* padding: 10px; */
+	padding: 20px;
 }
 
 @media (max-width: 720px) {
@@ -386,11 +387,13 @@ nav {
 }
 
 .card img {
-	width: 100%;
+	width: calc(100% + 40px);
+	margin-top: -20px;
+	margin-left: -20px;
 	height: auto;
 }
 
-.card h3 {
+/* .card h3 {
 	padding: 20px;
 	margin: 0;
 }
@@ -402,7 +405,7 @@ nav {
 
 .card .btn {
 	margin-left: 20px;
-}
+} */
 
 .banner-content {
 	vertical-align: middle;
