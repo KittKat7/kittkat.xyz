@@ -1,10 +1,16 @@
 :root {
+
+	/* --accent: #40bbbf; */
+	--accent: #00aadd;
+	--accent-off: #0088aa;
+
+
 	--forground: #000000;
 	--forground-off: #1f1f1f;
 	--background: #d5e6ed;
 	--background-off: #b1c0c7;
-	--accent: #5890aa;
-	--accent-off: #3d6e85;
+	/* --accent: #5890aa; */
+	/* --accent-off: #3d6e85; */
 }
 
 /* 
@@ -31,10 +37,19 @@
 	:root {
 		--forground: #ffffff;
 		--forground-off: #b1c0c7;
+
+
 		--background: #252525;
 		--background-off: #191919;
-		--accent: #3d6e85;
-		--accent-off: #5890aa;
+
+
+
+		/* --forground: #ffffff; */
+		/* --forground-off: #b1c0c7; */
+		/* --background: #252525; */
+		/* --background-off: #191919; */
+		/* --accent: #3d6e85; */
+		/* --accent-off: #5890aa; */
 	}
 }
 
@@ -205,7 +220,7 @@ code {
 	color: var(--forground);
 
 	/* Set the background color and border */
-	background-color: var(--accent);
+	background-color: var(--accent-off);
 	border: none;
 	border-radius: 7px;
 
@@ -221,7 +236,7 @@ code {
 }
 
 .btn:hover {
-	background-color: var(--accent-off);
+	background-color: var(--accent);
 	/* border: none; */
 }
 
@@ -372,6 +387,8 @@ nav {
 	/* padding-bottom: 20px; */
 	/* padding: 10px; */
 	padding: 20px;
+	padding-bottom: 0px;
+	padding-top: 0px;
 }
 
 @media (max-width: 720px) {
@@ -388,7 +405,7 @@ nav {
 
 .card img {
 	width: calc(100% + 40px);
-	margin-top: -20px;
+	/* margin-top: -20px; */
 	margin-left: -20px;
 	height: auto;
 }
@@ -414,7 +431,7 @@ nav {
 	position: relative;
 	margin-left: auto;
 	margin-right: auto;
-	background-color: var(--accent);
+	background-color: var(--accent-off);
 	padding: 20px;
 	border-radius: 20px;
 }
@@ -434,7 +451,7 @@ nav {
 }
 
 .h2-banner {
-	background-color: var(--accent);
+	background-color: var(--accent-off);
 	padding: 20px;
 	text-align: center;
 	border-radius: 10px;
