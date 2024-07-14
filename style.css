@@ -377,7 +377,7 @@ nav {
 
 .card {
 	background: linear-gradient(var(--background), var(--background)) padding-box,
-		linear-gradient(to top left, var(--accent), var(--accent-off)) border-box;
+		linear-gradient(to top left, var(--accent-off), var(--accent)) border-box;
 	border-radius: 1em;
 	border: 4px solid transparent;
 
