@@ -3,12 +3,12 @@
 	--accent-off: #25741a;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
 	:root {
 		--accent: #25741a;
 		--accent-off: #32b12d;
 	}
-}
+} */
 
 main {
 	background-color: inherit;
