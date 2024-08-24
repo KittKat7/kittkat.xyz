@@ -1,0 +1,58 @@
+<link rel="stylesheet" href="/style.css?v=202407131929">
+<script src="/z.lib/import.js"></script>
+<script id="/z.lib/head.html">include();</script>
+
+<script>
+	function searchDDG() {
+
+		const searchInput = document.getElementById("search-input");
+
+		if (searchInput.value.trim() === "") {
+			return false;
+		}
+
+		const endpoint = "https://search.brave.com/search";
+		const params = {
+			q: searchInput.value.trim(),
+			// sites: "stackoverflow.com"
+		};
+
+		const queryString = Object.entries(params)
+			.map(([key, value]) => `${encodeURIComponent(key)}=${encodeURIComponent(value)}`)
+			.join("&");
+
+		window.location.href = `${endpoint}?${queryString}`;
+
+		return false;
+	}
+</script>
+
+<body>
+	<script id="/z.lib/header.html">include();</script>
+	<main>
+		<div style="position: relative;">
+			<img src="/z.assets/2023-01-11_cat_sleeping_on_window.jpg" alt="Cyberpunk cat" style="width: 100%;">
+			<div style="position: absolute; top: 25%; left: 50%; transform: translate(-50%, 0%);">
+				<form action="#" method="get" onsubmit="return searchDDG();">
+					<input autocomplete="off" type="text" id="search-input" placeholder="Search Brave..." autofocus>
+					<button type="submit">Search</button>
+				</form>
+			</div>
+		</div>
+	</main>
+	<script id="/z.lib/footer.html">include();</script>
+</body>
+
+<style>
+	input[type="text"] {
+		flex: 1;
+		padding: 10px;
+		border: none;
+		border-radius: 5px;
+		font-size: 18px;
+		background-color: var(--background-off);
+		/* input field background color */
+		color: #fff;
+		/* input field text color */
+	}
+</style>
