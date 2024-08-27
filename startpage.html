@@ -3,7 +3,7 @@
 <script id="/z.lib/head.html">include();</script>
 
 <script>
-	function searchDDG() {
+	function searchWeb() {
 
 		const searchInput = document.getElementById("search-input");
 
@@ -30,29 +30,71 @@
 <body>
 	<script id="/z.lib/header.html">include();</script>
 	<main>
-		<div style="position: relative;">
+		<!-- <div style="position: relative;">
 			<img src="/z.assets/2023-01-11_cat_sleeping_on_window.jpg" alt="Cyberpunk cat" style="width: 100%;">
-			<div style="position: absolute; top: 25%; left: 50%; transform: translate(-50%, 0%);">
-				<form action="#" method="get" onsubmit="return searchDDG();">
-					<input autocomplete="off" type="text" id="search-input" placeholder="Search Brave..." autofocus>
-					<button type="submit">Search</button>
-				</form>
-			</div>
+			
+		</div> -->
+		<div class="search-box">
+			<form action="#" method="get" onsubmit="return searchWeb();" class="search-form">
+				<input autocomplete="off" type="text" id="search-input" placeholder="Search Brave..." autofocus
+					class="search-input">
+				<button type="submit" class="search-button">Search</button>
+			</form>
 		</div>
 	</main>
 	<script id="/z.lib/footer.html">include();</script>
 </body>
 
 <style>
-	input[type="text"] {
+	/* Container for the form */
+	.search-box {
+		max-width: 1000px;
+		/* Adjust max-width as needed */
+		margin: 20px auto;
+		/* Center the container horizontally with some margin */
+		border: 3px solid var(--background);
+		border-radius: 15px;
+		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+		background-color: var(--background);
+	}
+
+	/* Form layout */
+	.search-form {
+		display: flex;
+		align-items: center;
+		margin: 0px;
+	}
+
+	/* Input field */
+	.search-input {
 		flex: 1;
-		padding: 10px;
 		border: none;
-		border-radius: 5px;
-		font-size: 18px;
-		background-color: var(--background-off);
-		/* input field background color */
-		color: #fff;
-		/* input field text color */
+		padding: 10px;
+		font-size: 16px;
+		border-radius: 5px 0 0 5px;
+		color: var(--foreground);
+		background-color: var(--background);
+	}
+
+	/* Button */
+	.search-button {
+		padding: 10px 20px;
+		border: none;
+		background-color: transparent;
+		color: var(--foreground);
+		font-size: 16px;
+		cursor: pointer;
+	}
+
+	.search-button:hover {
+		/* background-color: var(--background-off); */
+		background-color: transparent;
+	}
+
+	*:focus {
+		outline: none;
+		/* outline-color: var(--accent);
+		outline-style: dashed;
+		outline-width: 3px; */
 	}
 </style>
