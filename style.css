@@ -402,6 +402,15 @@ nav {
 		display: none;
 	}
 
+	.site-search {
+		display: none;
+	}
+
+	.site-search button {
+		display: none;
+	}
+
+
 	nav:hover .navLinks {
 		display: block;
 		background-color: var(--accent);
