@@ -65,3 +65,26 @@ function getAppCard() {
 	};
 	xhr.send();
 }
+
+function searchSite() {
+
+	const searchInput = document.getElementById("search-input");
+
+	if (searchInput.value.trim() === "") {
+		return false;
+	}
+
+	const endpoint = "https://duckduckgo.com/";
+	const params = {
+		q: searchInput.value.trim(),
+		sites: "kittkat.xyz"
+	};
+
+	const queryString = Object.entries(params)
+		.map(([key, value]) => `${encodeURIComponent(key)}=${encodeURIComponent(value)}`)
+		.join("&");
+
+	window.location.href = `${endpoint}?${queryString}`;
+
+	return false;
+}

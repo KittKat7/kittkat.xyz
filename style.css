@@ -72,11 +72,34 @@ body {
 
 /* HEADER */
 header {
-	top: 0;
-	left: 0;
-	right: 0;
+	/* top: 0; */
+	/* left: 0; */
+	/* right: 0; */
 	background-color: var(--accent);
 	padding: 7px;
+	display: block;
+}
+
+header * {
+	display: inline-flex;
+}
+
+form {
+	margin: 0px;
+}
+
+input[type=text] {
+	/* Adjust max-width as needed */
+	/* Center the container horizontally with some margin */
+	border: 3px solid var(--accent-off);
+	border-radius: 10px;
+	background-color: var(--accent-off);
+	color: var(--forground);
+	font-size: 16;
+}
+
+header input:focus {
+	outline: none;
 }
 
 .nav-btn {
