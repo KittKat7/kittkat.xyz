@@ -92,7 +92,7 @@ input[type=text] {
 	/* Adjust max-width as needed */
 	/* Center the container horizontally with some margin */
 	border: 3px solid var(--accent-off);
-	border-radius: 10px;
+	border-radius: 15px;
 	background-color: var(--accent-off);
 	color: var(--forground);
 	font-size: 16;
