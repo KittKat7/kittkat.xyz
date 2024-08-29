@@ -147,6 +147,7 @@ header {
 
 .site-search button:hover {
 	color: var(--forground-off);
+	background-color: transparent;
 }
 
 .home-btn {
