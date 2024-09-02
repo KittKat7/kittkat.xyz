@@ -37,12 +37,12 @@ jobs:
         uses: actions/setup-python@v4
         with:
           python-version: '3.9'
-      - name: Download weavedown
+      - name: Download Weavedown
         run: |
-          git clone https://github.com/KittKat7/Weavedown.git
+          git clone https://github.com/KittKat7/weavedown.git
       - name: Compile site
         run: |
-          python ./Weavedown/main.py ./repo/ ./out/
+          python ./weavedown/main.py ./repo/ ./out/
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
