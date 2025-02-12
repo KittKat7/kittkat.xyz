@@ -43,7 +43,6 @@ jobs:
       - name: Compile site
         run: |
           mkdir -p ./out/
-        run: |
           python ./htcompile/main.py ./repo/src/ ./out/
       - name: Setup Pages
         uses: actions/configure-pages@v5
