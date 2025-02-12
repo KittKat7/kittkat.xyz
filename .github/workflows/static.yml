@@ -39,10 +39,10 @@ jobs:
           python-version: '3.9'
       - name: Download Weavedown
         run: |
-          git clone https://github.com/KittKat7/weavedown.git
+          git clone https://github.com/KittKat7/htcompile.git
       - name: Compile site
         run: |
-          python ./weavedown/main.py ./repo/src/ ./out/
+          python ./htcompile/main.py ./repo/src/ ./out/
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
