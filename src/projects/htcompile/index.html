@@ -20,6 +20,7 @@
 
 		<a href="#about" class="btn">About</a>
 		<a href="#install" class="btn">Install</a>
+		<a href="#manual" class="btn">Manual</a>
 		<!-- <a href="#tools" class="btn">Tools</a> -->
 		<a href="https://github.com/KittKat7/htcompile" class="btn">Github</a>
 		
@@ -36,92 +37,81 @@
 		</section>
 
 		<section id="install">
-
-		</section>
-
-		<!-- <section id="install">
-
-			<h2 class="h2-banner">How to install/update</h2>
-
+			
+			<h2 class="h2-banner">Install</h2>
+			
 			<p>
-				To install, run the command
-				<code>bash <(curl https://raw.githubusercontent.com/KittKat7/katbox/main/installer.sh)</code>
-				<br>
-				To install, update, or uninstall, after already installed, <code>katbox modify</code> will bring up the
-				install/uninstall menu to walk through install/update/uninstall.
+				<h3>Requirements</h3>
+				<ul>
+					<li>Python 3.9+</li>
+				</ul>
+				
+				<h3>Manual</h3>
+				<ul>
+					<li>
+						Make sure python 3.10+ is installed my running
+						<code>python --version</code>
+					</li>
+					<li>
+						Clone the GitHub repo to a location on your system
+						<code>git clone https://github.com/KittKat7/htcompile.git</code>
+					</li>
+					<li>
+						The program can now be run by using
+						<code>python PATH/TO/htcompile/main.py SOURCE DESTINATION</code>
+					</li>
+					<li>
+						(Optional) Add an alias in your shell rc file (IE ~/.bashrc).
+						<code>alias 'htcompile'='python PATH/TO/htcompile/main.py</code> This will
+						allow simply running <code>htcompile SOURCE DESTINATION</code>
+					</li>
+				</ul>
+				
+				<h3>PIP - Recommended</h3>
+				<ul>
+					<li>
+						Coming soon!
+					</li>
+				</ul>
+
+				
 			</p>
 
-			<h3>System Requirments</h3>
-
+		</section>
+		
+		<section id="manual">
+			
+			<h2 class="h2-banner">User Manual</h2>
+			
+			<h3>Basics</h3>
 			<p>
-				<b>System:</b> Linux (may work on MacOS, features may work on Windows with some tweaks)
+				Once the program is installed, the program can be run with
+				<code>htcompile SOURCER DESTINATION</code> to compile your website.
+				<code>SOURCE</code> is the source folder of the HTML and <code>DESTINATION</code> is
+				the folder to output the compiled HTML.
 				<br>
-				<b>Shell:</b> Tested on Bash and ZSH (other shells may work)
+				The recommended file structure is:
+				<pre><code>
+|--projectdir/
+|  |--src/
+|  |  |--index.html
+|  |  |--page-a/
+|  |  |  |--index.html
+|  |  |--page-b/
+|  |     |--index.html
+|  |--dst/
+|  |  |--(this is where the compiled files will go)
+				</code></pre>
+				
+				Then running the the program inside <code>projectdir</code> would look like this:
 				<br>
-				<b>Python:</b> At least version 3
+				<code>$ htcompile ./src ./dst</code>
+				<br>
+				The generated files will be placed in <code>./dst</code>
 			</p>
-
+			
 		</section>
 
-		<section id="tools">
-
-			<h2 class="h2-banner">Tools</h2>
-
-			<div class="card-set">
-
-				<div class="card"><a href="#tools/passgen" class="blank-a">
-						<h3>Password Generator</h3>
-					</a></div>
-
-				<div class="card"><a href="#tools/primefind" class="blank-a">
-						<h3>Prime Finder</h3>
-					</a></div>
-
-				<div class="card"><a href="#tools/convertbase" class="blank-a">
-						<h3>Convert Base</h3>
-					</a></div>
-
-			</div>
-
-			<section id="tools/passgen">
-				<h3>Pass Generator</h3>
-				<p>
-					Generate random passwords!
-					<br>
-					Command: <code>katbox passgen</code> Example output: <code>Oe!qwyk!w!zZ0UYN70o_Mw8y</code>
-					<br>
-					If no param is provided, a password will be generated with the default length (24). If you want to
-					generate with a specific length, use that length as the param.
-				</p>
-			</section>
-
-			<section id="tools/primefind">
-				<h3>Prime Finder</h3>
-				<p>
-					Find x prime numbers!
-					<br>
-					Command: <code>katbox primefind</code> Example output:
-					<code>[1, 2, 3, 5, 7, 11, 13, 17, 19, 23]</code>
-					<br>
-					The first param is the number of primes to find, with a default of 10.
-				</p>
-			</section>
-
-			<section id="tools/convertbase">
-				<h3>Convert Base</h3>
-				<p>
-					Convert a number in one base to another.
-					<br>
-					Command: <code>katbox convertbase 13-2</code> Example output:
-					<code>13_10 >> _2 = 1101</code>
-					<br>
-					The param structor is "NUMBER[BASE (defaults to 10)]-NEWBASE". NUMBER is required, BASE is optional,
-					NEWBASE is required. For example, "13-2" converts 13 in
-					base 10 to base 2, "1010_2-10" converts 1010 in base 2 to base 10.
-				</p>
-			</section>
-
-		</section> -->
 	</main>
 	<htcompile src="/z.lib/footer.html">
 </body>
