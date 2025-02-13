@@ -105,6 +105,7 @@
 |  |  |--index.html
 |  |  |--page-a/
 |  |  |  |--index.html
+|  |  |  |--another.html
 |  |  |--page-b/
 |  |     |--index.html
 |  |--dst/
@@ -116,6 +117,18 @@
 				<code>$ htcompile ./src ./dst</code>
 				<br>
 				The generated files will be placed in <code>./dst</code>
+				<br>
+				To utilize htcompile in your HTML, add a <code>&lt;htcompile src="/PATH/TO/FILE/&gt;</code>
+				Make note that starting the path with "/" starts at the path provided as SOURCE to
+				<code>htcompile</code>. IE in the file structure above using <code>htcompile ./src ./dst</code>
+				"/" would represent "src/". To import <code>page-b</code> into <code>page-a</code>
+				you would use <code>&lt;htcompile src="/page-b/index.html"&gt;</code>. On the other hand,
+				"./" is treated as relative to the files location, so to import <code>another.html</code>
+				into <code>page-a/index.html</code> you could either use
+				<code>&lt;htcompile src="/page-a/another.html"&gt;</code> or
+				<code>&lt;htcompile src="./another.html"&gt;</code> If you wanted to inport <code>another.html</code>
+				into <code>page-b/index.html</code> you would use
+				<code>&lt;htcompile src="/page-a/another.html"&gt;</code>
 			</p>
 			
 		</section>
