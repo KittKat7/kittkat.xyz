@@ -1,68 +1,72 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="UTF-8">
   <title>Countdown Timer</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <style>
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
 
-body {
-  font-family: Arial, sans-serif;
-  background-color: #fff;
-  color: #333;
-}
-
-.timer-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: #f2f2f2;
-}
-
-.timer {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  background-color: #fff;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-  padding: 20px;
-}
-
-.timer div {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 0 10px;
-}
-
-.timer div span {
-  font-size: 50px;
-  font-weight: bold;
-}
-
-@media (prefers-color-scheme: dark) {
   body {
-    background-color: #333;
-    color: #fff;
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #333;
   }
+
   .timer-container {
-    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f2f2f2;
   }
+
   .timer {
-    background-color: #555;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    padding: 20px;
   }
-}
+
+  .timer div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
+  }
+
+  .timer div span {
+    font-size: 50px;
+    font-weight: bold;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-color: #333;
+      color: #fff;
+    }
+
+    .timer-container {
+      background-color: #333;
+    }
+
+    .timer {
+      background-color: #555;
+    }
+  }
 </style>
+
 <body>
   <div class="timer-container">
     <div class="timer">
@@ -75,30 +79,31 @@ body {
   </div>
   <script>
     const countdown = () => {
-    const countDate = new Date("May 9, 2023 13:30:00").getTime();
-    const now = new Date().getTime();
-    const gap = countDate - now;
+      const countDate = new Date("May 9, 2025 13:30:00").getTime();
+      const now = new Date().getTime();
+      const gap = countDate - now;
 
-    // Convert time to days, hours, minutes and seconds
-    const second = 1000;
-    const minute = second * 60;
-    const hour = minute * 60;
-    const day = hour * 24;
+      // Convert time to days, hours, minutes and seconds
+      const second = 1000;
+      const minute = second * 60;
+      const hour = minute * 60;
+      const day = hour * 24;
 
-    const days = Math.floor(gap / day);
-    const hours = Math.floor((gap % day) / hour);
-    const minutes = Math.floor((gap % hour) / minute);
-    const seconds = Math.floor((gap % minute) / second);
+      const days = Math.floor(gap / day);
+      const hours = Math.floor((gap % day) / hour);
+      const minutes = Math.floor((gap % hour) / minute);
+      const seconds = Math.floor((gap % minute) / second);
 
-    // Display the countdown timer
-    document.querySelector(".days").innerText = days + " days, ";
-    document.querySelector(".hours").innerText = hours + " hours, ";
-    document.querySelector(".minutes").innerText = minutes + " minutes, ";
-    document.querySelector(".seconds").innerText = seconds + " seconds: ";
+      // Display the countdown timer
+      document.querySelector(".days").innerText = days + " days, ";
+      document.querySelector(".hours").innerText = hours + " hours, ";
+      document.querySelector(".minutes").innerText = minutes + " minutes, ";
+      document.querySelector(".seconds").innerText = seconds + " seconds: ";
     };
 
     // Update the countdown every second
     setInterval(countdown, 1000);
   </script>
 </body>
+
 </html>
