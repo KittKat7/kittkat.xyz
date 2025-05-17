@@ -114,7 +114,7 @@ header input:focus {
 	font-family: Arial, sans-serif;
 	text-decoration: none;
 	/* display: inline-block; */
-	margin-right: 10px;
+	margin: 10px;
 }
 
 header {
