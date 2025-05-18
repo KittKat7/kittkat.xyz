@@ -14,25 +14,25 @@
 	/* --accent-off: #3d6e85; */
 }
 
-@media (prefers-color-scheme: dark) {
-	:root {
-		--forground: #ffffff;
-		--forground-off: #E0E0E0;
+/* @media (prefers-color-scheme: dark) { */
+:root {
+	--forground: #ffffff;
+	--forground-off: #E0E0E0;
 
 
-		--background: #252525;
-		--background-off: #191919;
+	--background: #252525;
+	--background-off: #191919;
 
 
 
-		/* --forground: #ffffff; */
-		/* --forground-off: #b1c0c7; */
-		/* --background: #252525; */
-		/* --background-off: #191919; */
-		/* --accent: #3d6e85; */
-		/* --accent-off: #5890aa; */
-	}
+	/* --forground: #ffffff; */
+	/* --forground-off: #b1c0c7; */
+	/* --background: #252525; */
+	/* --background-off: #191919; */
+	/* --accent: #3d6e85; */
+	/* --accent-off: #5890aa; */
 }
+
 
 html {
 	/* height: 100%; not sure this is userful?*/
