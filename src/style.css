@@ -7,37 +7,17 @@
 
 	--forground: #000000;
 	--forground-off: #1f1f1f;
-	--background: #d5e6ed;
-	--background-off: #b1c0c7;
+	--background: #DADADA;
+	--background-off: #E6E6E6;
 	/* OLD ACCENT COLOR */
 	/* --accent: #5890aa; */
 	/* --accent-off: #3d6e85; */
 }
 
-/* 
-:root.dark-mode {
-	--forground: #ffffff;
-	--forground-off: #b1c0c7;
-	--background: #1f1f1f;
-	--background-off: #191919;
-	--accent-off: #5890aa;
-	--accent: #3d6e85;
-} */
-
-/* @media (prefers-color-scheme: light) {
-	:root {
-	--forground: #000000;
-	--forground-off: #1f1f1f;
-	--background: #d5e6ed;
-	--background-off: #b1c0c7;
-	--accent: #5890aa;
-	--accent-off: #3d6e85;
-}	} */
-
 @media (prefers-color-scheme: dark) {
 	:root {
 		--forground: #ffffff;
-		--forground-off: #b1c0c7;
+		--forground-off: #E0E0E0;
 
 
 		--background: #252525;
