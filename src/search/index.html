@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>kittkat.xyz - Search</title>
+	<htcompile src="/z.lib/head.html" />
+	<script src="./search.js"></script>
+</head>
+
+<body>
+	<htcompile src="/z.lib/header.html" />
+	<main>
+
+		<h2 class="h2-banner">
+			Search: <span id="searchTerm"></span>
+		</h2>
+
+		<script>
+			document.getElementById('searchTerm').textContent = getSearchTerm();
+		</script>
+
+		<div id="results">
+			<noscript>
+				<h3>JavaScript is disabled!</h3>
+				<p>
+					Please enable JavaScript for best experience. While most of the site should work without any
+					JavaScript, certain features (such as search) only work with JavaScript enabled.
+				</p>
+			</noscript>
+		</div>
+
+		<script>
+			searchIndex(getSearchTerm());
+		</script>
+
+	</main>
+	<htcompile src="/z.lib/footer.html" />
+</body>
+
+</html>

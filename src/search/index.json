@@ -1,0 +1,25 @@
+{
+	"/": {
+		"title": "kittkat.xyz",
+		"tags": [
+			"kittkat",
+			"home"
+		],
+		"desc": "Home page"
+	},
+	"/about/": {
+		"title": "About Me",
+		"tags": [
+			"about"
+		],
+		"desc": "About me and about me work and what I do."
+	},
+	"/projects/": {
+		"title": "Projects",
+		"tags": [
+			"projects",
+			"portfolio"
+		],
+		"desc": "A collection of my projects to showcase."
+	}
+}
