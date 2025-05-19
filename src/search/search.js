@@ -19,12 +19,13 @@ async function displayResult(result) {
 		var link = document.createElement("a");
 		h.appendChild(link);
 		// link.classList.add("btn");
-		link.textContent = `${result["title"]} - ${result["link"]}`
+		link.textContent = `${result["title"]} (${result["link"]})`;
 		link.href = result["link"];
 		node.appendChild(h);
 		node.appendChild(document.createTextNode(result["desc"]));
 	}
 	resultsDiv.appendChild(node);
+	resultsDiv.appendChild(document.createElement("br"));
 }
 
 async function searchIndex(search) {
