@@ -2,18 +2,16 @@
 <html lang="en">
 
 <head>
-
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-	<link rel="stylesheet" href="style.css">
 	<title>HTCompile</title>
-	<htcompile src="/z.lib/head.html">
+	<meta name="keywords" content="html, compile, compiler, static, dev, developer, development">
+	<meta name="description"
+		content="HTCompile is a static time HTML compiler designed to help reuse HTML components across a website.">
+	<htcompile src="/z.lib/head.html" />
 	<link rel="icon" type="image/png" href="./z.assets/htcompile_ico64x64.png">
 </head>
 
 <body>
-	<htcompile src="/z.lib/header.html">
+	<htcompile src="/z.lib/header.html" />
 	<main>
 
 		<h1>HTCompile</h1>
@@ -24,11 +22,11 @@
 		<!-- <a href="#tools" class="btn">Tools</a> -->
 		<a href="https://github.com/KittKat7/htcompile" class="btn">Github</a>
 		<a href="https://pypi.org/project/htcompile/" class="btn">PyPi</a>
-		
+
 		<section id="about">
-			
+
 			<h2 class="h2-banner">About</h2>
-			
+
 			<p>
 				HTCompile has compile-time imports to prevent the need to rewrite a page header
 				every on every single page. Instead, just import it at compile-time!
@@ -38,59 +36,59 @@
 		</section>
 
 		<section id="install">
-			
-			<h2 class="h2-banner">Install</h2>
-			
-			<p>
-				<h3>Requirements</h3>
-				<ul>
-					<li>Python 3.9+</li>
-				</ul>
-				
-				<h3>Manual</h3>
-				<ul>
-					<li>
-						Make sure python 3.9+ is installed by running
-						<code>python --version</code>
-					</li>
-					<li>
-						Clone the GitHub repo to a location on your system
-						<code>git clone https://github.com/KittKat7/htcompile.git</code>
-					</li>
-					<li>
-						The program can now be run by using
-						<code>python PATH/TO/htcompile/main.py SOURCE DESTINATION</code>
-					</li>
-					<li>
-						(Optional) Add an alias in your shell rc file (IE ~/.bashrc).
-						<code>alias 'htcompile'='python PATH/TO/htcompile/main.py</code> This will
-						allow simply running <code>htcompile SOURCE DESTINATION</code>
-					</li>
-				</ul>
-				
-				<h3>PIP - Recommended</h3>
-				<ul>
-					<li>
-						Make sure python3 pip is installed for your system.
-					</li>
-					<li>
-						Run <code>pip install htcompile</code>
-					</li>
-					<li>
-						Make sure htcompile is installed by running
-						<code>htcompile --help</code>
-					</li>
-				</ul>
 
-				
+			<h2 class="h2-banner">Install</h2>
+
+			<p>
+			<h3>Requirements</h3>
+			<ul>
+				<li>Python 3.9+</li>
+			</ul>
+
+			<h3>Manual</h3>
+			<ul>
+				<li>
+					Make sure python 3.9+ is installed by running
+					<code>python --version</code>
+				</li>
+				<li>
+					Clone the GitHub repo to a location on your system
+					<code>git clone https://github.com/KittKat7/htcompile.git</code>
+				</li>
+				<li>
+					The program can now be run by using
+					<code>python PATH/TO/htcompile/main.py SOURCE DESTINATION</code>
+				</li>
+				<li>
+					(Optional) Add an alias in your shell rc file (IE ~/.bashrc).
+					<code>alias 'htcompile'='python PATH/TO/htcompile/main.py</code> This will
+					allow simply running <code>htcompile SOURCE DESTINATION</code>
+				</li>
+			</ul>
+
+			<h3>PIP - Recommended</h3>
+			<ul>
+				<li>
+					Make sure python3 pip is installed for your system.
+				</li>
+				<li>
+					Run <code>pip install htcompile</code>
+				</li>
+				<li>
+					Make sure htcompile is installed by running
+					<code>htcompile --help</code>
+				</li>
+			</ul>
+
+
 			</p>
 
 		</section>
-		
+
 		<section id="manual">
-			
+
 			<h2 class="h2-banner">User Manual</h2>
-			
+
 			<h3>Basics</h3>
 			<p>
 				Once the program is installed, the program can be run with
@@ -99,7 +97,7 @@
 				the folder to output the compiled HTML.
 				<br>
 				The recommended file structure is:
-				<pre><code>
+			<pre><code>
 |--projectdir/
 |  |--src/
 |  |  |--index.html
@@ -111,30 +109,30 @@
 |  |--dst/
 |  |  |--(this is where the compiled files will go)
 				</code></pre>
-				
-				Then running the the program inside <code>projectdir</code> would look like this:
-				<br>
-				<code>$ htcompile ./src ./dst</code>
-				<br>
-				The generated files will be placed in <code>./dst</code>
-				<br>
-				To utilize htcompile in your HTML, add a <code>&lt;htcompile src="/PATH/TO/FILE/&gt;</code>
-				Make note that starting the path with "/" starts at the path provided as SOURCE to
-				<code>htcompile</code>. IE in the file structure above using <code>htcompile ./src ./dst</code>
-				"/" would represent "src/". To import <code>page-b</code> into <code>page-a</code>
-				you would use <code>&lt;htcompile src="/page-b/index.html"&gt;</code>. On the other hand,
-				"./" is treated as relative to the files location, so to import <code>another.html</code>
-				into <code>page-a/index.html</code> you could either use
-				<code>&lt;htcompile src="/page-a/another.html"&gt;</code> or
-				<code>&lt;htcompile src="./another.html"&gt;</code> If you wanted to inport <code>another.html</code>
-				into <code>page-b/index.html</code> you would use
-				<code>&lt;htcompile src="/page-a/another.html"&gt;</code>
+
+			Then running the the program inside <code>projectdir</code> would look like this:
+			<br>
+			<code>$ htcompile ./src ./dst</code>
+			<br>
+			The generated files will be placed in <code>./dst</code>
+			<br>
+			To utilize htcompile in your HTML, add a <code>&lt;htcompile src="/PATH/TO/FILE/&gt;</code>
+			Make note that starting the path with "/" starts at the path provided as SOURCE to
+			<code>htcompile</code>. IE in the file structure above using <code>htcompile ./src ./dst</code>
+			"/" would represent "src/". To import <code>page-b</code> into <code>page-a</code>
+			you would use <code>&lt;htcompile src="/page-b/index.html"&gt;</code>. On the other hand,
+			"./" is treated as relative to the files location, so to import <code>another.html</code>
+			into <code>page-a/index.html</code> you could either use
+			<code>&lt;htcompile src="/page-a/another.html"&gt;</code> or
+			<code>&lt;htcompile src="./another.html"&gt;</code> If you wanted to inport <code>another.html</code>
+			into <code>page-b/index.html</code> you would use
+			<code>&lt;htcompile src="/page-a/another.html"&gt;</code>
 			</p>
-			
+
 		</section>
 
 	</main>
-	<htcompile src="/z.lib/footer.html">
+	<htcompile src="/z.lib/footer.html" />
 </body>
 
 </html>
