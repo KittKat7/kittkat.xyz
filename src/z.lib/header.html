@@ -1,6 +1,12 @@
 <header>
+	<script src="/search/search.js"></script>
 	<a href="/" class="nav-btn home-btn">kittkat.xyz</a>
-	<htcompile src="/search/searchbar.html" />
+
+	<form action="#" method="get" onsubmit="return loadSearch();" class="site-search">
+		<input autocomplete="off" type="text" id="search-input" placeholder="Search...">
+		<button type="submit">Search</button>
+	</form>
+
 	<nav>
 		<button class="navDropdownButton nav-btn">Navigation</button>
 		<div class="navLinks">

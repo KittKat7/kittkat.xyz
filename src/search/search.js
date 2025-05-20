@@ -12,18 +12,23 @@ async function fetchIndex() {
 async function displayResult(result) {
 	var resultsDiv = document.getElementById("results");
 	var node = document.createElement("div");
+
+	// If no result
 	if (result == null) {
-		node.appendChild(document.createTextNode("NO RESULTS"));
+		var h = document.createElement("h3");
+		node.appendChild(h);
+		h.textContent = "NO RESULTS";
 	}
+
+	// Else, result
 	else {
 		var h = document.createElement("h3");
 		var link = document.createElement("a");
 		h.appendChild(link);
-		// link.classList.add("btn");
-		link.textContent = `[${result["index"]}] ${result["title"]} (${result["link"]})`;
-		link.href = result["link"];
+		link.textContent = `[${result.index}] ${result.title} - ${result.link}`;
+		link.href = result.link;
 		node.appendChild(h);
-		node.appendChild(document.createTextNode(result["desc"]));
+		node.appendChild(document.createTextNode(result.desc));
 	}
 	resultsDiv.appendChild(node);
 	resultsDiv.appendChild(document.createElement("br"));
@@ -32,8 +37,6 @@ async function displayResult(result) {
 // Runs a search through the index for the provided search term. Uses displayResult to display the located search results.
 async function searchIndex(search) {
 	index = await fetchIndex();
-
-	var h3 = document.getElementById("searchTerm").value = search;
 
 	search = search.toLowerCase().trim();
 
@@ -107,9 +110,9 @@ function loadSearch() {
 	const searchInput = document.getElementById("search-input");
 	var searchStr = searchInput.value;
 
-	if (searchStr.trim() === "") {
-		return false;
-	}
+	// if (searchStr.trim() === "") {
+	// 	return false;
+	// }
 
 	searchStr = searchStr.trim();
 	searchStr = searchStr.toLowerCase();

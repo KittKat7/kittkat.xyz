@@ -13,12 +13,14 @@
 	<htcompile src="/z.lib/header.html" />
 	<main>
 
-		<h2 class="h2-banner">
-			Search: <span id="searchTerm"></span>
+		<h2>
+			Results for: <span id="searchTerm"></span>
 		</h2>
+		<hr>
 
 		<script>
 			document.getElementById('searchTerm').textContent = getSearchTerm();
+			document.getElementById('search-input').value = getSearchTerm();
 		</script>
 
 		<div id="results">

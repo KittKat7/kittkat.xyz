@@ -106,19 +106,28 @@ header {
 .site-search {
 	flex: 1;
 	display: flex;
-	margin: 0 20px;
+	margin: 0 5px;
 	background-color: var(--accent-off);
-	border-radius: 15px;
+	border-radius: 10px;
+	padding: 0;
 }
 
 .site-search input {
 	flex: 1;
-	padding: 5px;
+	padding: 5px 15px;
 	color: var(--forground);
 }
 
+.site-search input::placeholder {
+	color: var(--forground);
+}
+
+.site-search input:focus {
+	outline: none;
+}
+
 .site-search button {
-	padding: 5px 10px;
+	padding: 5px 15px;
 	border: none;
 	background-color: transparent;
 	color: var(--forground);
