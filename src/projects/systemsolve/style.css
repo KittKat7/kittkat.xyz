@@ -2,3 +2,37 @@
 	--accent: green;
 	--accent-off: gray;
 }
+
+code {
+	background-color: var(--background);
+	border-radius: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin: 5px;
+}
+
+pre code {
+	display: block;
+	white-space: pre;
+	-webkit-overflow-scrolling: touch;
+	overflow-x: scroll;
+	max-width: 100%;
+	min-width: 100px;
+	scrollbar-width: 10px;
+}
+
+code .comment {
+	color: green;
+}
+
+code .command {
+	color: red;
+}
+
+code .if {
+	color: aqua;
+}
+
+code .while {
+	color: magenta;
+}

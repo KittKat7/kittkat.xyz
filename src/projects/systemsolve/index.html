@@ -7,16 +7,193 @@
 	<meta name="description"
 		content="System Solve is a programming puzzle game where you must code your way to complete the puzzle. This project was initially created as a final project for App States Software Engineering class.">
 	<htcompile src="/z.lib/head.html" />
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="./style.css">
 	<link rel="shortcut icon" href="./z.assets/player.png" type="image/x-icon">
+	<script src="./styler.js" defer></script>
 </head>
 
 <body>
 	<htcompile src="/z.lib/header.html" />
 	<main>
 		<h1>System Solve</h1>
+		<h2 class="h2-banner">About</h2>
+
+		<a href="https://github.com/KittKat7/SystemSolve" class="btn">Source Code</a>
+
+		<h3>Goals</h3>
+
+		<p>
+			Make a fun game which teaches basic coding concepts to anyone who has no previous experience, but wants to
+			learn. This project was originally created as a final project for App State Software Engineering (CS3667).
+		</p>
+
+
+		<h3>Authors</h3>
+
+		<ul>
+			<li>Avery <a href="https://kittkat.xyz/">https://kittkat.xyz/</a></li>
+			<li>Daniel <a href="https://github.com/danielward14">https://github.com/danielward14</a></li>
+			<li>Gwen <a href="https://github.com/Gwen-Lockamy">https://github.com/Gwen-Lockamy</a></li>
+		</ul>
+
+		<!--
+			= User Guide
+		-->
+		<h2 class="h2-banner">User Guide</h2>
+		<!--
+			== Comments
+		-->
+		<p>
+		<h3>Comments</h3>
+
+		Comments allow for leaving notes in the code without affecting the code. Any line that starts with
+		<code>#</code> will be ignored as code, and will not be run. This means that <code># moveU</code> will not run.
+		Allowing us to add documentation into our code without affecting how it runs.
+
+		<h4>Example</h4>
+
+		<pre><code>
+# In this case, we can say what the code is doing without interupting the code.
+# This code will move the character up three times
+moveU
+moveU
+moveU
+			</code></pre>
+		</p>
+		<!--
+			== Movement
+		-->
+		<p>
+		<h3>Movement Components</h3>
+
+		Controls the movement of the character.
+		<br>
+		Every time one of these Components is run, the character will attempt to move in the designated direction.
+
+		<h4>Components</h4>
+
+		<code>moveU</code> Move the character one tile up
+		<br>
+		<code>moveD</code> Move the character one tile down
+		<br>
+		<code>moveL</code> Move the character one tile left
+		<br>
+		<code>moveR</code> Move the player one tile right
+
+		<h4>Example</h4>
+
+		<pre><code>
+# Move the character up twice, then left twice, then down once.
+moveU
+moveU
+moveL
+moveL
+moveD
+		</code></pre>
+		</p>
+		<!--
+			== Conditions
+		-->
+		<p>
+		<h3>Conditions</h3>
+
+		A condition is a true or false value depending one some condition. These conditions are used in if statements
+		and while loops to determine its behavior. If the condition for the if statement is true, then the if statement
+		will run, otherwise the if's code will be skipped. If statements can also be negated by using <code>!</code> in
+		front of the condition. For example <code>isOnGoal</code> is true if the player is on the goal, however
+		<code>!isOnGoal</code> is true if the player is NOT on the goal.
+
+		<h4>Components</h4>
+
+		<code>true</code> Always true
+		<br>
+		<code>false</code> Always false, same as <code>!TRUE</code>
+		<br>
+		<code>canMoveU</code> Is true if the player can move up
+		<br>
+		<code>canMoveD</code> Is true if the player can move down
+		<br>
+		<code>canMoveL</code> Is true if the player can move left
+		<br>
+		<code>canMoveR</code> Is true if the player can move right
+		<br>
+		<code>isOnGoal</code> Is true if the character is on the goal, or the map has no goal.
+
+		<h4>Example</h4>
+
+		<pre><code>
+# Move the character up only if the player can move up
+if canMoveU:
+	moveU
+fi
+
+# Move the character left if the plater CANNOT move right
+if !canMoveR:
+	moveL
+fi
+		</code></pre>
+
+		</p>
+		<!--
+			== If Statements
+		-->
+		<p>
+		<h3>If statements</h3>
+
+		If statements control what code runs depenting on a given condition. For example, if you only want to mode left
+		if you can move left. You could use an if statement to check if you can move left, and if so, run the code to
+		move left.
+
+		<h4>Components</h4>
+
+		If statements are made of several different components.
+		<br>
+		<code>if</code> Signifies that this is an if statement
+		<br>
+		<code># CONDITION:</code> The condition in the if statement
+		<br>
+		<code>fi</code> Signifies the end of the if statement
+		<br>
+		<br>
+		If statements are constructed:
+		<pre><code>
+# Begenning of if code (replace 'CONDITION' with the actual condition, but keep the ':')
+if CONDITION:
+	# code
+	# code
+	# code
+# End of if code block
+fi
+		</code></pre>
+
+		<h4>Example</h4>
+
+		<pre><code>
+if canMoveU:
+	moveU
+fi
+		</code></pre>
+		</p>
+		<!--
+			== While loops
+		-->
+		<p>
+		<h3>While loops</h3>
+
+		<h4>Components</h4>
+
+		<h4>Example</h4>
+
+		<pre><code>
+while canMoveU:
+	moveU
+elihw
+		</code></pre>
+		</p>
+
 	</main>
 	<htcompile src="/z.lib/footer.html" />
 </body>
+
 
 </html>
