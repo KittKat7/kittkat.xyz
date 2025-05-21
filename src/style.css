@@ -197,7 +197,8 @@ main {
 	transform: translate(calc((100vw - 100%) / 2 - var(--pad)), 0);
 	margin-left: var(--pad);
 	margin-right: var(--pad);
-	--main-height: 100%
+	--main-height: 100%;
+	container-type: inline-size
 }
 
 @media (orientation: landscape) {
@@ -430,42 +431,41 @@ nav {
 
 .card-set {
 	display: flex;
-	justify-content: space-evenly;
+	/* justify-content: space-evenly; */
+	justify-content: space-between;
 	flex-wrap: wrap;
 }
 
 .card {
+	box-sizing: border-box;
 	background: linear-gradient(var(--background), var(--background)) padding-box,
 		linear-gradient(to top left, var(--accent-off), var(--accent)) border-box;
 	border-radius: 1em;
 	border: 4px solid transparent;
 
-	width: calc(100%/3 - 55px);
+	width: calc(100%/3);
 	background-color: var(--background);
 	overflow: hidden;
 	margin-bottom: 20px;
-	/* padding-bottom: 20px; */
-	/* padding: 10px; */
 	padding: 20px;
 	padding-bottom: 0px;
 	padding-top: 0px;
 }
 
-@media (max-width: 1280px) {
+@container (max-width: 720px) {
 	.card {
-		width: calc(100%/2 - 55px);
+		width: calc(100%/2);
 	}
 }
 
 @media (max-width: 480px) {
 	.card {
-		width: calc(100% - 10px);
+		width: calc(100%);
 	}
 }
 
 .card img {
 	width: calc(100% + 40px);
-	/* margin-top: -20px; */
 	margin-left: -20px;
 	height: auto;
 }
