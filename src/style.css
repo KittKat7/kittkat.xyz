@@ -36,6 +36,16 @@
 	background-color: var(--background);
 }
 
+.print-mode {
+	--foreground: #000000;
+	--foreground-off: #1f1f1f;
+	--background: transparent;
+	--background-off: transparent;
+
+	color: var(--foreground);
+	background-color: var(--background);
+}
+
 .dark-mode {
 	--foreground: #ffffff;
 	--foreground-off: #E0E0E0;
@@ -45,6 +55,8 @@
 	color: var(--foreground);
 	background-color: var(--background);
 }
+
+
 
 
 body {

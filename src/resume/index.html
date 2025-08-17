@@ -63,14 +63,15 @@
 			var resumeHTML = resume.innerHTML;
 
 			body.innerHTML = resumeHTML;
+			document.documentElement.classList.add("print-mode");
 			window.print();
+			document.documentElement.classList.remove("print-mode");
 			body.innerHTML = bodyHTML;
 		}
 		function printPDF() {
 			var resumePage = document.getElementById("resume-page");
 			var printPage = document.createElement("div");
-			printPage.classList.add("light-mode");
-			printPage.style.backgroundColor = "transparent";
+			printPage.classList.add("print-mode");
 			printPage.style.width = "8.5in";
 			printPage.style.margin = "0";
 			printPage.style.padding = "0";
