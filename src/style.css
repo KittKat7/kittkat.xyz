@@ -1,38 +1,38 @@
 :root {
-
-	/* --accent: #40bbbf; */
 	--accent: #00aadd;
 	--accent-off: #0088aa;
-
 
 	--forground: #000000;
 	--forground-off: #1f1f1f;
 	--background: #DADADA;
 	--background-off: #E6E6E6;
-	/* OLD ACCENT COLOR */
-	/* --accent: #5890aa; */
-	/* --accent-off: #3d6e85; */
+
 }
 
-/* @media (prefers-color-scheme: dark) { */
-:root {
+@media not print {
+	@media (prefers-color-scheme: dark) {
+		:root {
+			--forground: #ffffff;
+			--forground-off: #E0E0E0;
+			--background: #252525;
+			--background-off: #191919;
+		}
+	}
+}
+
+.light-mode {
+	--forground: #000000;
+	--forground-off: #1f1f1f;
+	--background: #DADADA;
+	--background-off: #E6E6E6;
+}
+
+.dark-mode {
 	--forground: #ffffff;
 	--forground-off: #E0E0E0;
-
-
 	--background: #252525;
 	--background-off: #191919;
-
-
-
-	/* --forground: #ffffff; */
-	/* --forground-off: #b1c0c7; */
-	/* --background: #252525; */
-	/* --background-off: #191919; */
-	/* --accent: #3d6e85; */
-	/* --accent-off: #5890aa; */
 }
-
 
 html {
 	/* height: 100%; not sure this is userful?*/

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en" class="light-mode">
+
+<head>
+	<title>Resume</title>
+	<meta name="keywords" content="resume, skills, experience, job, work, education">
+	<meta name="description"
+		content="My current and up to date resume, showcasing my best education and work experience.">
+	<htcompile src="/z.lib/head.html" />
+
+	<style>
+		#resume-page {
+			max-width: 8.5in;
+			width: 8.5in;
+			max-height: 11in;
+			height: 11in;
+			background-color: var(--background);
+			margin: auto;
+			box-shadow: 0 0 15px var(--accent);
+			padding: 0;
+		}
+
+		#resume-body {
+			box-sizing: border-box;
+			width: 100%;
+			/* height: 100%; */
+			padding: 0.5in;
+		}
+
+		#resume-body th {
+			text-align: left;
+		}
+
+		#resume-body td {
+			text-align: right;
+		}
+
+		.resume-section {
+			width: 100%;
+			border-collapse: collapse;
+		}
+
+		#resume-body .list th,
+		#resume-body .list td {
+			padding: 5px;
+			border-bottom: 1px solid var(--forground-off);
+		}
+
+		@media print {
+			#resume-body {
+				padding: 0;
+			}
+		}
+	</style>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+		integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script>
+		function printResume() {
+			var body = document.body;
+			var resume = document.getElementById("resume-page");
+			var bodyHTML = body.innerHTML;
+			var resumeHTML = resume.innerHTML;
+
+			body.innerHTML = resumeHTML;
+			window.print();
+			body.innerHTML = bodyHTML;
+		}
+		function printPDF() {
+			var resumePage = document.getElementById("resume-page");
+			var printPage = document.createElement("div");
+			printPage.innerHTML = resumePage.innerHTML;
+			html2pdf().set({ filename: "Avery-Resume.pdf" }).from(printPage).save();
+			;
+			// var resumeBody = document.getElementById("resume-body");
+			// resumeBody.classList.add('light-mode');
+			// await inlineStyles(printPage);
+			// document.getElementById("resume-page").innerHTML = printPage.innerHTML;
+			// html2pdf().from(printPage).save();
+			// resumeBody.classList.remove('light-mode');
+			// document.getElementById("resume-body").innerHTML = innerHTML;
+		}
+		// async function inlineStyles(element) {
+		// 	const links = document.querySelectorAll("link[rel='stylesheet']");
+
+		// 	for (let link of links) {
+		// 		try {
+		// 			const href = link.href;
+		// 			const response = await fetch(href);
+		// 			const cssText = await response.text();
+
+		// 			// Create a <style> element with the stylesheet content
+		// 			const styleEl = document.createElement("style");
+		// 			styleEl.textContent = cssText;
+
+		// 			// Replace the <link> with the <style>
+		// 			element.prepend(styleEl);
+		// 		} catch (err) {
+		// 			console.error("Failed to inline stylesheet:", link.href, err);
+		// 		}
+		// 	}
+		// }
+	</script>
+</head>
+
+<body>
+	<htcompile src="/z.lib/header.html" />
+	<main>
+		<div id="resume-btns" style="text-align: center; margin-bottom: 0.5in;">
+			<button onclick="printResume()">Print Page</button>
+			<button onclick="printPDF()">Download PDF</button>
+		</div>
+		<div id="resume-page" class="light-mode">
+			<div id="resume-body">
+				<!-- Head of resume, contact info, etc... -->
+				<table id="resume-head" class="resume-section">
+					<tr>
+						<th>
+							<h2 style="margin-top: 0">Avery - KittKat</h2>
+						</th>
+						<td style="vertical-align:top;">
+							<table style="margin-left:auto;">
+								<tr>
+									<th>Email: </th>
+									<td>contact@kittkat.xyz</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+				<hr>
+				<!-- Education Experience -->
+				<h2 style="text-align: center;">Education Experience/Leadership</h2>
+				<table id="resume-education" class="resume-section list">
+					<tr>
+						<th>Appalachian State University</th>
+						<td>Major in Computer Science, Minor in ASL. Expected Graduation - Spring 2026</td>
+					</tr>
+					<tr>
+						<th>App State ASCII Club</th>
+						<td>Vice President Fall 2025-Spring 2026</td>
+					</tr>
+					<tr>
+						<th>App State Robotics Club</th>
+						<td>Programming Lead: Spring 2023-Spring 2026; President: Fall 2023-Spring 2025; Vice
+							Presidentl: Fall 2025-Spring 2026;</td>
+					</tr>
+				</table>
+				<!-- Work Experience -->
+				<h2 style="text-align:center;">Work Experience</h2>
+				<table id="resume-work" class="resume-section list">
+					<tr>
+						<th>Camp Counselor: Piedmont Wildlife Center</th>
+						<td>Summer 2017 - Summer 2023: (including year-round camp). Childcare as a Counselor in
+							Training,
+							Intern, Support Counselor, Lead Counselor, Specialty Counselor.</td>
+					</tr>
+					<tr>
+						<th>Childcare: Community Church of Chapel Hill</th>
+						<td>Fall 2017 - Summer 2023: Childcare, Leading activities</td>
+					</tr>
+					<tr>
+						<th>IT/CS Internship: Bowen Learning Network</th>
+						<td>June 2023 - July 2023, May 2025 - Present: Experience with Moodle plugins, Zoho CRM APIs,
+							PayPal APIs, Laravel, PHP, HTTP Requests.</td>
+					</tr>
+				</table>
+				<!-- Certification -->
+				<h2 style="text-align:center;">Certifications</h2>
+				<table id="resume-certs" class="resume-section list">
+					<tr>
+						<th>AHA: First Aid/CPR/AED</th>
+						<td>Certified through the American Heart Association, 06/--/2021 - 06/--/2025</td>
+					</tr>
+					<tr>
+						<th>AHA: Basic Life Support Provider</th>
+						<td>Certified through the American Heart Assiciation, 08/--/2023 - 04/--/2027</td>
+					</tr>
+					<tr>
+						<th>IT Specialist in Java</th>
+						<td>Certified through Certiport, issued 12/02/2021</td>
+					</tr>
+				</table>
+				<!-- Certification -->
+				<h2 style="text-align:center;">Skills</h2>
+				<table id="resume-skills" class="resume-section list">
+					<tr>
+						<th>Programming</th>
+						<td>Java, Python, Dart/Flutter, PHP, HTML/CSS, JavaScript, C++, Zoho CRM APIs, PayPal APIs,
+							Laravel, Moodle, Git, Linux, HTTP Requests, Vim, VS Code</td>
+					</tr>
+					<tr>
+						<th>Team/Communication</th>
+						<td>Leadership (activities, projects, etc...), Communication (radio, email, in person,
+							listening), Critical Thinking (problem solving, logical analysis)</td>
+					</tr>
+					<tr>
+						<th>Other</th>
+						<td>Basic life saving/First Aid/CPR, American Sign Language</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+
+	</main>
+	<htcompile src="/z.lib/footer.html" />
+</body>
+
+</html>
