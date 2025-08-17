@@ -23,7 +23,7 @@ h2 {
 
 table {
 	background-color: var(--background);
-	color: var(--forground);
+	color: var(--foreground);
 	width: 100%;
 	border-collapse: collapse;
 	border: 2px solid var(--accent);
