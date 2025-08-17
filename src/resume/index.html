@@ -83,44 +83,24 @@
 				filename: "Avery-Resume.pdf",
 				jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
 			}).from(printPage).save();
-
-			// var resumeBody = document.getElementById("resume-body");
-			// resumeBody.classList.add('light-mode');
-			// await inlineStyles(printPage);
-			// document.getElementById("resume-page").innerHTML = printPage.innerHTML;
-			// html2pdf().from(printPage).save();
-			// resumeBody.classList.remove('light-mode');
-			// document.getElementById("resume-body").innerHTML = innerHTML;
 		}
-		// async function inlineStyles(element) {
-		// 	const links = document.querySelectorAll("link[rel='stylesheet']");
-
-		// 	for (let link of links) {
-		// 		try {
-		// 			const href = link.href;
-		// 			const response = await fetch(href);
-		// 			const cssText = await response.text();
-
-		// 			// Create a <style> element with the stylesheet content
-		// 			const styleEl = document.createElement("style");
-		// 			styleEl.textContent = cssText;
-
-		// 			// Replace the <link> with the <style>
-		// 			element.prepend(styleEl);
-		// 		} catch (err) {
-		// 			console.error("Failed to inline stylesheet:", link.href, err);
-		// 		}
-		// 	}
-		// }
 	</script>
 </head>
 
 <body>
 	<htcompile src="/z.lib/header.html" />
 	<main>
-		<div id="resume-btns" style="text-align: center; margin-bottom: 0.5in;">
-			<button onclick="printResume()">Print Page</button>
-			<button onclick="printPDF()">Download PDF</button>
+		<div id="resume-btn-container" style="text-align:center;margin-bottom:0.5in;">
+			<noscript>
+				<p>
+					Print/Save to PDF buttons are only available with JS enabled.
+				</p>
+			</noscript>
+			<div id="resume-btns" style="display:none;">
+				<button onclick="printResume()">Print Page</button>
+				<button onclick="printPDF()">Download PDF</button>
+			</div>
+			<script>document.getElementById("resume-btns").style.display = "unset";</script>
 		</div>
 		<div id="resume-page" class="light-mode">
 			<div id="resume-body">
