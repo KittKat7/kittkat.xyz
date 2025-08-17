@@ -6,15 +6,26 @@
 	<meta name="description" content="This is how you can contact me with any questions.">
 	<meta name="keywords" content="contact, questions, kittkat">
 	<htcompile src="/z.lib/head.html" />
+	<style>
+		.page {
+			box-sizing: border-box;
+			max-width: 8.5in;
+			min-height: 11in;
+			padding: 0.5in;
+			margin: auto;
+		}
+	</style>
 </head>
 
 <body>
 	<htcompile src="/z.lib/header.html" />
 	<main>
-		<iframe
-			src="https://docs.google.com/forms/d/e/1FAIpQLSfs9QsBQjKIiIW6NjvXPCfSvbg4g9QDI3nkE2IOXf2rJUoylQ/viewform?embedded=true"
-			style="width:100%;height:1080px;background-color:var(--accent-off);" frameborder="0" marginheight="0"
-			marginwidth="0">Loading…</iframe>
+		<div class="light-mode page">
+			<iframe
+				src="https://docs.google.com/forms/d/e/1FAIpQLSfs9QsBQjKIiIW6NjvXPCfSvbg4g9QDI3nkE2IOXf2rJUoylQ/viewform?embedded=true"
+				style="width:100%;height:10in;box-sizing: border-box;" frameborder="0" marginheight="0"
+				marginwidth="0">Loading…</iframe>
+		</div>
 
 	</main>
 	<htcompile src="/z.lib/footer.html" />

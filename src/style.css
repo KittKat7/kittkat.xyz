@@ -46,9 +46,6 @@
 	background-color: var(--background);
 }
 
-html {
-	/* height: 100%; not sure this is userful?*/
-}
 
 body {
 	margin: 0 auto;
