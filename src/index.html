@@ -19,25 +19,18 @@
 	</main>
 	<htcompile src="/z.lib/footer.html" />
 	<style>
+		html {
+
+			background-image: url('/z.assets/2023-01-11_cat_sleeping_on_window.jpg');
+		}
+
 		html,
 		body {
 			height: 100%;
 			margin: 0;
-		}
-
-		body::before {
-			content: "";
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			background-image: url('/z.assets/2023-01-11_cat_sleeping_on_window.jpg');
-			background-size: cover;
+			backdrop-filter: blur(10px);
+			background-size: calc(cover + 20px);
 			background-position: center;
-			background-repeat: no-repeat;
-			filter: blur(8px);
-			z-index: -1;
 		}
 
 		/* Your other styles */

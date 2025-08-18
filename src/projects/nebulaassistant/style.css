@@ -1,11 +1,11 @@
 :root {
-	--accent: purple;
-	--accent-off: blueviolet;
+	--color-accent: purple;
+	--color-accent-dark: blueviolet;
 }
 
 @media (prefers-color-scheme: dark) {
 	:root {
-		--accent: blueviolet;
-		--accent-off: purple;
+		--color-accent: blueviolet;
+		--color-accent-dark: purple;
 	}
 }

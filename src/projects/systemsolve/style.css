@@ -1,6 +1,6 @@
 :root {
-	--accent: green;
-	--accent-off: gray;
+	--color-accent: green;
+	--color-accent-dark: gray;
 }
 
 code {

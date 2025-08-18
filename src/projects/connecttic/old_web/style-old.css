@@ -1,14 +1,14 @@
 :root {
 	--background: #DFDFDF;
 	--foreground: #202020;
-	--accent: #006489;
+	--color-accent: #006489;
 }
 
 @media (prefers-color-scheme: dark) {
 	:root {
 		--background: #202020;
 		--foreground: #DFDFDF;
-		--accent: #006489;
+		--color-accent: #006489;
 	}
 }
 
@@ -22,7 +22,7 @@ body {
 
 header {
 	text-align: center;
-	background-color: var(--accent);
+	background-color: var(--color-accent);
 	margin: 0;
 	padding: 1px;
 	border-radius: 10px;

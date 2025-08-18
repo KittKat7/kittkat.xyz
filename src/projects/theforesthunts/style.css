@@ -1,12 +1,12 @@
 :root {
-	--accent: #32b12d;
-	--accent-off: #25741a;
+	--color-accent: #32b12d;
+	--color-accent-dark: #25741a;
 }
 
 /* @media (prefers-color-scheme: dark) {
 	:root {
-		--accent: #25741a;
-		--accent-off: #32b12d;
+		--color-accent: #25741a;
+		--color-accent-dark: #32b12d;
 	}
 } */
 
@@ -15,7 +15,7 @@ main {
 }
 
 h2 {
-	background-color: var(--accent);
+	background-color: var(--color-accent);
 	padding: 20px;
 	text-align: center;
 	border-radius: 10px;
@@ -26,25 +26,25 @@ table {
 	color: var(--foreground);
 	width: 100%;
 	border-collapse: collapse;
-	border: 2px solid var(--accent);
+	border: 2px solid var(--color-accent);
 }
 
 tr:nth-child(even) {
-	background-color: var(--accent);
+	background-color: var(--color-accent);
 }
 
 th {
 	font-weight: bold;
 	text-align: right;
-	border-right: 2px solid var(--accent);
+	border-right: 2px solid var(--color-accent);
 	padding: 10px;
-	border: 2px solid var(--accent);
+	border: 2px solid var(--color-accent);
 }
 
 td {
 	text-align: left;
 	padding: 10px;
-	border: 2px solid var(--accent);
+	border: 2px solid var(--color-accent);
 }
 
 .character-card {
@@ -83,9 +83,9 @@ li {
 }
 
 a {
-	color: var(--accent);
+	color: var(--color-accent);
 }
 
 a:active {
-	color: var(--accent-off)
+	color: var(--color-accent-dark)
 }

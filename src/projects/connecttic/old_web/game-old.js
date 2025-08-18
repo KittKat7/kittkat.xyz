@@ -8,7 +8,7 @@ let scale = 0;
 
 let backgroundColor = getComputedStyle(document.body).getPropertyValue('--background');
 let foregroundColor = getComputedStyle(document.body).getPropertyValue('--foreground');
-let accentColor = getComputedStyle(document.body).getPropertyValue('--accent');
+let accentColor = getComputedStyle(document.body).getPropertyValue('--color-accent');
 
 let state = "HOME";
 
