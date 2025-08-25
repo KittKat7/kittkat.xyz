@@ -159,12 +159,11 @@ label {
 .site-search input {
 	flex: 1;
 	padding: 5px 15px;
-	color: var(--gray-E);
 	border-radius: inherit;
 }
 
 .site-search input::placeholder {
-	color: var(--gray-E);
+	color: var(--foreground-off);
 }
 
 .site-search input:focus {
