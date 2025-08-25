@@ -6,27 +6,29 @@
 	<meta name="description" content="This is how you can contact me with any questions.">
 	<meta name="keywords" content="contact, questions, kittkat">
 	<htcompile src="/z.lib/head.html" />
-	<style>
-		.page {
-			box-sizing: border-box;
-			max-width: 8.5in;
-			min-height: 11in;
-			padding: 0.5in;
-			margin: auto;
-		}
-	</style>
+	<script src="./contact.js"></script>
 </head>
 
 <body>
 	<htcompile src="/z.lib/header.html" />
 	<main>
-		<div class="light-mode page">
-			<iframe
-				src="https://docs.google.com/forms/d/e/1FAIpQLSfs9QsBQjKIiIW6NjvXPCfSvbg4g9QDI3nkE2IOXf2rJUoylQ/viewform?embedded=true"
-				style="width:100%;height:10in;box-sizing: border-box;" frameborder="0" marginheight="0"
-				marginwidth="0">Loading…</iframe>
+		<form id="contact-form" onsubmit="submitContactForm(event)" class="contact-form">
+			<div class="pd-1">
+				<label for="contact-name" class="form-label">Name</label>
+				<input type="text" name="name" id="contact-name" class="form-control" required>
+			</div>
+			<div class="pd-1">
+				<label for="contact-email" class="form-label">Email</label>
+				<input type="email" name="email" id="contact-email" class="form-control" required>
+			</div>
+			<div class="pd-1">
+				<label for="contact-comment" class="form-label">Comment</label>
+				<textarea name="comment" id="contact-comment" rows="3" class="form-control" required></textarea>
+			</div>
+		</form>
+		<div class="tx-c pd-1">
+			<button id="contact-submit" type="submit" form="contact-form" class="btn">Submit</button>
 		</div>
-
 	</main>
 	<htcompile src="/z.lib/footer.html" />
 </body>
