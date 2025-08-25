@@ -487,17 +487,11 @@ a:active {
 	color: var(--color-accent-dark);
 }
 
-.contact-form {}
-
 .contact-form input,
 .contact-form textarea {
 	padding: 5px;
 	border-radius: 10px;
 	width: 100%;
-}
-
-.tx-c {
-	text-align: center;
 }
 
 /* ## PADDING ## */
@@ -670,4 +664,17 @@ a:active {
 
 .mg-b3 {
 	margin-bottom: var(--sp3);
+}
+
+/* ## TEXT ## */
+.tx-c {
+	text-align: center;
+}
+
+.tx-l {
+	text-align: left;
+}
+
+.tx-r {
+	text-align: right;
 }
