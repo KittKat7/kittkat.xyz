@@ -25,25 +25,28 @@
 			width: 100%;
 			/* height: 100%; */
 			padding: 0.5in;
+			font-size: 12pt;
 		}
 
-		#resume-body th {
-			text-align: left;
-		}
-
-		#resume-body td {
-			text-align: right;
+		#resume-body .list li::marker {
+			/* content: "\25CF"; */
+			color: var(--color-accent);
 		}
 
 		.resume-section {
 			width: 100%;
-			border-collapse: collapse;
+			padding-left: 10px;
+			padding-right: 10px;
 		}
 
-		#resume-body .list th,
-		#resume-body .list td {
-			padding: 5px;
-			border-bottom: 1px solid var(--foreground-off);
+		.resume-section li {
+			padding-bottom: 10px;
+		}
+
+		.section-header {
+			text-align: center;
+			padding-bottom: 5px;
+			border-bottom: 2px dashed var(--color-accent);
 		}
 
 		@media print {
@@ -108,7 +111,7 @@
 				<table id="resume-head" class="resume-section">
 					<tr>
 						<th>
-							<h2 style="margin-top: 0">Avery - KittKat</h2>
+							<h2 style="margin-top: 0">Avery</h2>
 						</th>
 						<td style="vertical-align:top;">
 							<table style="margin-left:auto;">
@@ -122,75 +125,45 @@
 				</table>
 				<hr>
 				<!-- Education Experience -->
-				<h2 style="text-align: center;">Education Experience/Leadership</h2>
-				<table id="resume-education" class="resume-section list">
-					<tr>
-						<th>Appalachian State University</th>
-						<td>Major in Computer Science, Minor in ASL. Expected Graduation - Spring 2026</td>
-					</tr>
-					<tr>
-						<th>App State ASCII Club</th>
-						<td>Vice President Fall 2025-Spring 2026</td>
-					</tr>
-					<tr>
-						<th>App State Robotics Club</th>
-						<td>Programming Lead: Spring 2023-Spring 2026; President: Fall 2023-Spring 2025; Vice
-							Presidentl: Fall 2025-Spring 2026;</td>
-					</tr>
-				</table>
+				<h2 class="section-header">Education Experience/Leadership</h2>
+				<ul id="resume-education" class="resume-section list">
+					<li><strong>Appalachian State University:</strong> Major in Computer Science, Minor in ASL. Expected
+						Graduation - Spring 2026</li>
+					<li><strong>App State ASCII Club:</strong> Vice President Fall 2025-Spring 2026</li>
+					<li><strong>App State Robotics Club:</strong> Programming Lead: Spring 2023-Spring 2026; President:
+						Fall 2023-Spring 2025; Vice
+						Presidentl: Fall 2025-Spring 2026;</li>
+				</ul>
 				<!-- Work Experience -->
-				<h2 style="text-align:center;">Work Experience</h2>
-				<table id="resume-work" class="resume-section list">
-					<tr>
-						<th>Camp Counselor: Piedmont Wildlife Center</th>
-						<td>Summer 2017 - Summer 2023: (including year-round camp). Childcare as a Counselor in
-							Training,
-							Intern, Support Counselor, Lead Counselor, Specialty Counselor.</td>
-					</tr>
-					<tr>
-						<th>Childcare: Community Church of Chapel Hill</th>
-						<td>Fall 2017 - Summer 2023: Childcare, Leading activities</td>
-					</tr>
-					<tr>
-						<th>IT/CS Internship: Bowen Learning Network</th>
-						<td>June 2023 - July 2023, May 2025 - Present: Experience with Moodle plugins, Zoho CRM APIs,
-							PayPal APIs, Laravel, PHP, HTTP Requests.</td>
-					</tr>
-				</table>
+				<h2 class="section-header">Work Experience</h2>
+				<ul id="resume-work" class="resume-section list">
+					<li><strong>Camp Counselor: Piedmont Wildlife Center:</strong> 2017 - 2023: Camp Counselor, Lead
+						and Specialty Counselor.</li>
+					<li><strong>Childcare: Community Church of Chapel Hill:</strong> Fall 2017 - Summer 2023: Childcare,
+						Leading activities</li>
+					<li><strong>IT/CS Internship: Bowen Learning Network:</strong> Jun 2023 - Jul 2023, May 2025 -
+						Present: IT Assistant / Software Developer</li>
+				</ul>
 				<!-- Certification -->
-				<h2 style="text-align:center;">Certifications</h2>
-				<table id="resume-certs" class="resume-section list">
-					<tr>
-						<th>AHA: First Aid/CPR/AED</th>
-						<td>Certified through the American Heart Association, 06/--/2021 - 06/--/2025</td>
-					</tr>
-					<tr>
-						<th>AHA: Basic Life Support Provider</th>
-						<td>Certified through the American Heart Assiciation, 08/--/2023 - 04/--/2027</td>
-					</tr>
-					<tr>
-						<th>IT Specialist in Java</th>
-						<td>Certified through Certiport, issued 12/02/2021</td>
-					</tr>
-				</table>
+				<h2 class="section-header">Certifications</h2>
+				<ul id="resume-certs" class="resume-section list">
+					<li><strong>AHA: First Aid/CPR/AED:</strong> Certified through the AHA, Jun 2021 - Jun 2025</li>
+					<li><strong>AHA: Basic Life Support Provider:</strong> Certified through the AHA, Aug 2023 - Apr
+						2027
+					</li>
+					<li><strong>IT Specialist in Java:</strong> Certified through Certiport, issued 12/02/2021</li>
+				</ul>
 				<!-- Certification -->
-				<h2 style="text-align:center;">Skills</h2>
-				<table id="resume-skills" class="resume-section list">
-					<tr>
-						<th>Programming</th>
-						<td>Java, Python, Dart/Flutter, PHP, HTML/CSS, JavaScript, C++, Zoho CRM APIs, PayPal APIs,
-							Laravel, Moodle, Git, Linux, HTTP Requests, Vim, VS Code</td>
-					</tr>
-					<tr>
-						<th>Team/Communication</th>
-						<td>Leadership (activities, projects, etc...), Communication (radio, email, in person,
-							listening), Critical Thinking (problem solving, logical analysis)</td>
-					</tr>
-					<tr>
-						<th>Other</th>
-						<td>Basic life saving/First Aid/CPR, American Sign Language</td>
-					</tr>
-				</table>
+				<h2 class="section-header">Skills</h2>
+				<ul id="resume-skills" class="resume-section list">
+					<li><strong>Programming:</strong> Java, Python, Dart/Flutter, PHP, HTML/CSS, JavaScript, C++, Zoho
+						CRM APIs, PayPal APIs,
+						Laravel, Moodle, Git, Linux, HTTP Requests, Vim, VS Code</li>
+					<li><strong>Team/Communication:</strong> Leadership (activities, projects, etc...), Communication
+						(radio, email, in person,
+						listening), Critical Thinking (problem solving, logical analysis)</li>
+					<li><strong>Other:</strong> Basic life saving/First Aid/CPR, American Sign Language</li>
+				</ul>
 			</div>
 		</div>
 
