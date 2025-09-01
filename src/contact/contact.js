@@ -35,7 +35,7 @@ async function submitContactForm(ev) {
 	});
 
 	if (response.ok) {
-		alert("Message has been recieved by club officers");
+		alert("Message has been sent!");
 	} else {
 		alert("There was an error, please try again later");
 		document.getElementById("contact-submit").style.display = "unset";
