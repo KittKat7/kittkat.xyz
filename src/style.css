@@ -95,9 +95,14 @@ body {
 header {
 	background-color: var(--color-accent);
 	padding: 3px;
-	display: block;
+/*	display: block; */
 	display: flex;
 	align-items: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 100;
 }
 
 header * {
@@ -202,15 +207,12 @@ footer {
 main {
 	position: relative;
 	--pad: 20px;
-	margin-top: 20px;
+	margin-top: 2em;
 	margin-bottom: 20px;
 	overflow-y: auto;
-	padding: 50px;
-	padding-top: 0;
 	/* new below */
 	box-sizing: border-box;
 	padding: var(--pad);
-	/* background-color: var(--background); */
 	width: 95%;
 	transform: translate(calc((100vw - 100%) / 2 - var(--pad)), 0);
 	margin-left: var(--pad);
