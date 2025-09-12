@@ -8,15 +8,15 @@
 	</form>
 
 	<nav>
-		<button class="navDropdownButton nav-btn">Navigation</button>
+		<button class="navDropdownButton nav-btn"><span class="material-symbols-outlined" style="vertical-align: middle;">list</span></button>
 		<div class="navLinks">
 			<a href="/about/" class="nav-btn">About</a>
 			<a href="/projects/" class="nav-btn">Projects</a>
 			<a href="/contact/" class="nav-btn">Contact</a>
 		</div>
+		<button id="theme-switch" class="nav-btn" onclick="toggleDarkMode()">
+			<span class="material-symbols-outlined">light_mode</span>
+			<span class="material-symbols-outlined">dark_mode</span>
+		</button>
 	</nav>
-	<button id="theme-switch" class="nav-btn" onclick="toggleDarkMode()">
-		<span class="material-symbols-outlined">light_mode</span>
-		<span class="material-symbols-outlined">dark_mode</span>
-	</button>
 </header>

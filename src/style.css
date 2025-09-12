@@ -95,7 +95,7 @@ body {
 header {
 	background-color: var(--color-accent);
 	padding: 3px;
-/*	display: block; */
+	/*	display: block; */
 	display: flex;
 	align-items: center;
 	position: fixed;
@@ -367,17 +367,15 @@ button:hover,
 	max-width: calc(50% - 30px);
 }
 
-nav {
-	float: right;
-	position: relative;
-	display: inline;
-}
-
 .navDropdownButton {
 	display: none;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 900px) {
+	nav {
+		display: inline-block;
+	}
+
 	.navDropdownButton {
 		display: inline;
 	}
@@ -401,10 +399,19 @@ nav {
 	nav:hover .navLinks {
 		display: block;
 		background-color: var(--color-accent);
-		position: absolute;
+		position: fixed;
+		float: right;
 		z-index: 1;
-		padding: 5%;
-		right: -5;
+		right: 0;
+	}
+
+	nav:hover .navLinks * {
+		display: block;
+	}
+
+	nav:hover {
+		float: right;
+		position: relative;
 	}
 }
 
