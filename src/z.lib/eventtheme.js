@@ -1,7 +1,7 @@
 
 (function main() {
 	const dt = new Date();
-	if (dt.getMonth() == 9 && dt.getDate() == 21) {
+	if (dt.getMonth() == 9 && dt.getDate() == 31) {
 		document.body.setAttribute("mode", "dark");
 		document.body.setAttribute("event", "halloween");
 		const style = document.createElement("link");
