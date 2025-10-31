@@ -93,7 +93,7 @@ body {
 
 /* HEADER */
 header {
-	/* background-color: var(--color-accent); */
+	background-color: var(--color-accent);
 	padding: 3px;
 	/*	display: block; */
 	display: flex;
