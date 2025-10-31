@@ -1,5 +1,5 @@
 
-(function main() {
+document.addEventListener('DOMContentLoaded', () => {
 	const dt = new Date();
 	if (dt.getMonth() == 9 && dt.getDate() == 31) {
 		document.body.setAttribute("mode", "dark");
@@ -11,4 +11,4 @@
 		document.head.appendChild(style);
 		// <link rel="stylesheet" href="/style.css?v=202508250154">
 	}
-})()
+})
