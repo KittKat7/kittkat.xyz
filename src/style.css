@@ -93,7 +93,7 @@ body {
 
 /* HEADER */
 header {
-	background-color: var(--color-accent);
+	/* background-color: var(--color-accent); */
 	padding: 3px;
 	/*	display: block; */
 	display: flex;
@@ -502,187 +502,15 @@ a:active {
 	width: 100%;
 }
 
-/* ## PADDING ## */
-/* All */
-.pd-0 {
-	padding: 0;
-}
-
-.pd-1 {
-	padding: var(--sp1);
-}
-
-.pd-2 {
-	padding: var(--sp2);
-}
-
-.pd-3 {
-	padding: var(--sp3);
-}
-
-/* Left */
-.pd-l0 {
-	padding-left: 0;
-}
-
-.pd-l1 {
-	padding-left: var(--sp1);
-}
-
-.pd-l2 {
-	padding-left: var(--sp2);
-}
-
-.pd-l3 {
-	padding-left: var(--sp3);
-}
-
-/* Right */
-.pd-r0 {
-	padding-right: 0;
-}
-
-.pd-r1 {
-	padding-right: var(--sp1);
-}
-
-.pd-r2 {
-	padding-right: var(--sp2);
-}
-
-.pd-r3 {
-	padding-right: var(--sp3);
-}
-
-/* Top */
-.pd-t0 {
-	padding-top: 0;
-}
-
-.pd-t1 {
-	padding-top: var(--sp1);
-}
-
-.pd-t2 {
-	padding-top: var(--sp2);
-}
-
-.pd-t3 {
-	padding-top: var(--sp3);
-}
-
-/* Bottom */
-.pd-b0 {
-	padding-bottom: 0;
-}
-
-.pd-b1 {
-	padding-bottom: var(--sp1);
-}
-
-.pd-b2 {
-	padding-bottom: var(--sp2);
-}
-
-.pd-b3 {
-	padding-bottom: var(--sp3);
-}
-
-/* ## MARGIN ## */
-/* All */
-.mg-0 {
-	margin: 0;
-}
-
-.mg-1 {
-	margin: var(--sp1);
-}
-
-.mg-2 {
-	margin: var(--sp2);
-}
-
-.mg-3 {
-	margin: var(--sp3);
-}
-
-/* Left */
-.mg-l0 {
-	margin-left: 0;
-}
-
-.mg-l1 {
-	margin-left: var(--sp1);
-}
-
-.mg-l2 {
-	margin-left: var(--sp2);
-}
-
-.mg-l3 {
-	margin-left: var(--sp3);
-}
-
-/* Right */
-.mg-r0 {
-	margin-right: 0;
-}
-
-.mg-r1 {
-	margin-right: var(--sp1);
-}
-
-.mg-r2 {
-	margin-right: var(--sp2);
-}
-
-.mg-r3 {
-	margin-right: var(--sp3);
-}
-
-/* Top */
-.mg-t0 {
-	margin-top: 0;
-}
-
-.mg-t1 {
-	margin-top: var(--sp1);
-}
-
-.mg-t2 {
-	margin-top: var(--sp2);
-}
-
-.mg-t3 {
-	margin-top: var(--sp3);
-}
-
-/* Bottom */
-.mg-b0 {
-	margin-bottom: 0;
-}
-
-.mg-b1 {
-	margin-bottom: var(--sp1);
-}
-
-.mg-b2 {
-	margin-bottom: var(--sp2);
-}
-
-.mg-b3 {
-	margin-bottom: var(--sp3);
-}
-
-/* ## TEXT ## */
-.tx-c {
-	text-align: center;
-}
-
-.tx-l {
-	text-align: left;
-}
-
-.tx-r {
-	text-align: right;
+.frost {
+	background-color: color-mix(in srgb, var(--color-accent) 50%, transparent);
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	box-shadow:
+		0 8px 32px rgba(0, 0, 0, 0.1),
+		inset 0 1px 0 rgba(255, 255, 255, 0.5),
+		inset 0 -1px 0 rgba(255, 255, 255, 0.1),
+		inset 0 0 0px 0px rgba(255, 255, 255, 0);
+	overflow: hidden;
 }
